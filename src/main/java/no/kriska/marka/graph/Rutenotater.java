@@ -25,7 +25,7 @@ public class Rutenotater {
 		Rute nyRute = new Rute(poeng, distanse, beskrivelse);
 	
 		if (!finnesKortereRuteMedFlerPoeng(nyRute)) {
-			slettLengreRuterMedF¾rrePoeng(nyRute);
+			slettLengreRuterMedFaerrePoeng(nyRute);
 			aktuelleRuter.add(nyRute);
 			System.out.println("Noterer " + nyRute);
 			lagreRuterTilFil();
@@ -50,7 +50,7 @@ public class Rutenotater {
 		sorenskriver.write("raaData.txt", sb.toString());
 	}
 
-	private void slettLengreRuterMedF¾rrePoeng(Rute nyRute) {
+	private void slettLengreRuterMedFaerrePoeng(Rute nyRute) {
 		List<Rute> ruterAaSlette = new ArrayList<Rute>();
 		for (Rute rute : aktuelleRuter.headSet(nyRute, true)) {
 			if (rute.getDistanse() >= nyRute.getDistanse()) {
