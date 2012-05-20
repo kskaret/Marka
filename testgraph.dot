@@ -1,0 +1,10 @@
+graph G {
+sognsvann -- ullevalseter [len=2.65, label=5.3]
+sognsvann -- skjennungstua [len=2.55, label=5.1]
+ullevalseter -- fagervann [len=1.95, label=3.9]
+ullevalseter -- skjennungstua [len=1.15, label=2.3]
+ullevalseter -- studenterhytta [len=2.15, label=4.3]
+fagervann -- sognsvann [len=4.1, label=8.2]
+fagervann -- studenterhytta [len=3.9, label=7.8]
+skjennungstua -- studenterhytta [len=1.9, label=3.8]
+}

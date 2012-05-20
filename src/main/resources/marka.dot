@@ -1,0 +1,10 @@
+/*
+* @command = neato
+*
+*/
+graph G {
+	a -- b [len=1, label=1];
+	b -- c [len=2, label=2];
+	c -- a [len=2, label=2];
+	c -- d [len=1, label=1]
+}

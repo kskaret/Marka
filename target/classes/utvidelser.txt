@@ -1,0 +1,6 @@
+- Ikke samme loop tilbake
+
+- Finne korteste rute gjennom alle noder. Ikke gå lenger enn det. 
+- Måle tid bruke
+- Logge tid
+- Grafen på fil

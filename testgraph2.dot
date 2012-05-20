@@ -1,0 +1,17 @@
+graph G {
+	node [label="\N"];
+	graph [bb="0,0,714.55,576.64"];
+	sognsvann [pos="51.405,18", width="1.4279", height="0.5"];
+	ullevalseter [pos="335.14,294.13", width="1.5353", height="0.5"];
+	skjennungstua [pos="394.1,139.87", width="1.8374", height="0.5"];
+	fagervann [pos="222.92,558.64", width="1.37", height="0.5"];
+	studenterhytta [pos="649.18,232.58", width="1.8159", height="0.5"];
+	sognsvann -- ullevalseter [len="5.3", label="5.3", pos="69.154,35.273 120.11,84.863 266.45,227.28 317.4,276.86", lp="202.28,147.07"];
+	sognsvann -- skjennungstua [len="5.1", label="5.1", pos="87.755,30.926 152.27,53.867 286.3,101.53 353.64,125.48", lp="216.7,89.203"];
+	ullevalseter -- fagervann [len="3.9", label="3.9", pos="327.43,312.31 306.88,360.75 250.98,492.5 230.54,540.68", lp="267.98,422.5"];
+	ullevalseter -- skjennungstua [len="2.3", label="2.3", pos="342.02,276.13 353.32,246.57 375.69,188.03 387.08,158.23", lp="375.55,221.18"];
+	ullevalseter -- studenterhytta [len="4.3", label="4.3", pos="382.84,284.78 440.06,273.57 535.74,254.82 595.5,243.1", lp="491.17,273.94"];
+	fagervann -- sognsvann [len="8.2", label="8.2", pos="217.21,540.65 191.11,458.39 83.276,118.46 57.133,36.056", lp="126.17,291.35"];
+	fagervann -- studenterhytta [len="7.8", label="7.8", pos="244.35,542.25 316.94,486.72 553.14,306.04 626.94,249.59", lp="427.64,385.92"];
+	skjennungstua -- studenterhytta [len="3.8", label="3.8", pos="433.95,154.35 481.88,171.77 561.81,200.82 609.6,218.2", lp="525.78,175.28"];
+}

@@ -1,0 +1,781 @@
+%!PS-Adobe-3.0
+%%Creator: graphviz version 2.28.0 (20111028.1807)
+%%Title: G
+%%Pages: (atend)
+%%BoundingBox: (atend)
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+       dup 1 exch div /InvScaleFactor exch def
+       scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw text fitted to its expected width
+/alignedtext {			% width text
+	/text exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
+		} if
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+1 setmiterlimit
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 36 36 1258 956
+%%PageOrientation: Portrait
+0 0 1 beginpage
+gsave
+36 36 1222 920 boxprim clip newpath
+1 1 set_scale 0 rotate 40 41 translate
+% sognsvann
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+403.59 358.07 51.22 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+374.03 352.47 moveto 59.11 (sognsvann) alignedtext
+grestore
+% ullevalseter
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+532.19 504.79 55.32 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+499.93 499.19 moveto 64.52 (ullevalseter) alignedtext
+grestore
+% sognsvann--ullevalseter
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 418.85 375.48 moveto
+443.6 403.72 492.21 459.18 516.95 487.41 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+469.15 417.84 moveto 17.5 (5.3) alignedtext
+grestore
+% skjennungstua
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+556.64 425.62 65.94 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+516.59 420.02 moveto 80.1 (skjennungstua) alignedtext
+grestore
+% sognsvann--skjennungstua
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 435.67 372.23 moveto
+460.83 383.34 495.8 398.77 521.67 410.19 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+465.92 396.61 moveto 17.5 (5.1) alignedtext
+grestore
+% fagervann
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+520.41 659.6 49.46 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+492.42 654 moveto 55.97 (fagervann) alignedtext
+grestore
+% sognsvann--fagervann
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 410.55 376.03 moveto
+431.32 429.66 492.76 588.23 513.49 641.74 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+442.27 507.28 moveto 17.5 (8.2) alignedtext
+grestore
+% brunkollen
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+1162.01 399.24 52.31 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+1131.68 393.64 moveto 60.66 (brunkollen) alignedtext
+grestore
+% sognsvann--brunkollen
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 454.53 360.84 moveto
+592.19 368.31 970.65 388.85 1109.79 396.41 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+769.91 363.02 moveto 24.5 (14.1) alignedtext
+grestore
+% saeteren
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+42.33 125.87 42.5 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+19.41 120.27 moveto 45.86 (saeteren) alignedtext
+grestore
+% sognsvann--saeteren
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 378.76 342.11 moveto
+312.28 299.39 130.93 182.82 65.92 141.03 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+202.09 247.97 moveto 24.5 (13.4) alignedtext
+grestore
+% ullevalseter--skjennungstua
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 537.74 486.83 moveto
+541.71 473.96 547.04 456.7 551.03 443.79 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+546.64 462.71 moveto 17.5 (2.3) alignedtext
+grestore
+% ullevalseter--fagervann
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 530.81 522.85 moveto
+528.56 552.52 524.09 611.27 521.81 641.17 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+507.56 576.41 moveto 17.5 (3.9) alignedtext
+grestore
+% liggeren
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+445.89 719.45 42.51 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+422.95 713.85 moveto 45.87 (liggeren) alignedtext
+grestore
+% ullevalseter--liggeren
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 524.98 522.72 moveto
+508.73 563.13 469.42 660.92 453.14 701.42 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+469.31 602.47 moveto 17.5 (7.3) alignedtext
+grestore
+% studenterhytta
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+682.64 442.15 65.61 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+642.99 436.55 moveto 79.31 (studenterhytta) alignedtext
+grestore
+% ullevalseter--studenterhytta
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 566.33 490.58 moveto
+590.17 480.65 621.96 467.41 646.28 457.29 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+593.55 457.33 moveto 17.5 (4.3) alignedtext
+grestore
+% bjornholdt
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+661.71 599.11 50.91 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+632.55 593.51 moveto 58.33 (bjornholdt) alignedtext
+grestore
+% ullevalseter--bjornholdt
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 555.05 521.44 moveto
+578.72 538.68 615.49 565.45 639.08 582.63 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+581.31 556.43 moveto 17.5 (5.5) alignedtext
+grestore
+% kobberhaug
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+692.23 494.77 56.44 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+659.18 489.17 moveto 66.09 (kobberhaug) alignedtext
+grestore
+% ullevalseter--kobberhaug
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 586.82 501.37 moveto
+602.85 500.37 620.39 499.27 636.49 498.26 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+602.9 503.22 moveto 17.5 (4.4) alignedtext
+grestore
+% tomte
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+492.5 845.07 33.04 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+476.56 839.47 moveto 31.88 (tomte) alignedtext
+grestore
+% ullevalseter--tomte
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 530.05 523.09 moveto
+523.15 582.31 501.45 768.34 494.6 827.1 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+513.58 670.49 moveto 17.5 (8.2) alignedtext
+grestore
+% skjennungstua--brunkollen
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 622 422.78 moveto
+742.92 417.51 999.25 406.34 1109.64 401.53 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+853.57 415.55 moveto 24.5 (13.7) alignedtext
+grestore
+% skjennungstua--saeteren
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 528.63 409.3 moveto
+437.97 356.46 153.47 190.64 67.31 140.43 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+292.72 257.26 moveto 24.5 (14.1) alignedtext
+grestore
+% skjennungstua--studenterhytta
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 616.32 433.45 moveto
+618.74 433.77 621.16 434.09 623.58 434.4 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+611.2 437.33 moveto 17.5 (3.8) alignedtext
+grestore
+% skjennungstua--bjornholdt
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 567.49 443.54 moveto
+587.68 476.87 630.78 548.04 650.92 581.3 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+611.46 500.82 moveto 17.5 (5.8) alignedtext
+grestore
+% skjennungstua--kobberhaug
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 588.09 441.66 moveto
+610.31 452.99 639.92 468.09 661.89 479.3 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+611.24 465.88 moveto 17.5 (4.6) alignedtext
+grestore
+% smedmyrkoia
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+613.87 18 63.4 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+575.77 12.4 moveto 76.21 (smedmyrkoia) alignedtext
+grestore
+% skjennungstua--smedmyrkoia
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 559.18 407.58 moveto
+568.63 340.25 601.79 104.05 611.3 36.3 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+558.99 214.34 moveto 24.5 (12.3) alignedtext
+grestore
+% venas
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+965.42 92.41 33.04 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+949.48 86.81 moveto 31.88 (venas) alignedtext
+grestore
+% skjennungstua--venas
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 577.76 408.41 moveto
+649.04 350.31 880.03 162.01 947.04 107.39 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+759.15 264.3 moveto 24.5 (13.5) alignedtext
+grestore
+% fagervann--studenterhytta
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 533.41 642.17 moveto
+563.71 601.56 638.77 500.96 669.35 459.96 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+602.63 553.47 moveto 17.5 (7.8) alignedtext
+grestore
+% fagervann--bjornholdt
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 552.47 645.88 moveto
+575.27 636.12 605.8 623.04 628.79 613.2 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+577.88 612.94 moveto 17.5 (5.6) alignedtext
+grestore
+% fagervann--kobberhaug
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 538.15 642.58 moveto
+571.07 611 641.28 543.65 674.33 511.94 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+588.49 562.66 moveto 17.5 (8.3) alignedtext
+grestore
+% fagervann--tomte
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 517.68 677.72 moveto
+512.35 713.18 500.58 791.36 495.24 826.88 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+487.71 745.7 moveto 17.5 (4.5) alignedtext
+grestore
+% liggeren--fagervann
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 465.86 703.41 moveto
+476.38 694.96 489.26 684.62 499.86 676.1 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+482.11 694.16 moveto 17.5 (3.8) alignedtext
+grestore
+% liggeren--bjornholdt
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 471.92 704.94 moveto
+512.95 682.06 592.31 637.81 634.22 614.44 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+538.32 643.09 moveto 17.5 (5.4) alignedtext
+grestore
+% liggeren--kobberhaug
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 464 702.93 moveto
+509.34 661.58 627.35 553.95 673.42 511.93 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+568.96 610.83 moveto 17.5 (8.3) alignedtext
+grestore
+% liggeren--tomte
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 452.57 737.45 moveto
+461.43 761.33 476.98 803.24 485.84 827.11 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+449.45 780.68 moveto 17.5 (4.5) alignedtext
+grestore
+% kikut
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+798.16 754.78 30.33 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+783.77 749.18 moveto 28.78 (kikut) alignedtext
+grestore
+% liggeren--kikut
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 487.33 723.61 moveto
+558.99 730.8 704.43 745.38 767.66 751.72 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+619.75 722.07 moveto 17.5 (7.7) alignedtext
+grestore
+% gorja
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+328.88 720.9 30.32 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+314.49 715.3 moveto 28.77 (gorja) alignedtext
+grestore
+% liggeren--gorja
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 403.31 719.98 moveto
+388.94 720.16 373.17 720.36 359.87 720.52 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+372.84 705.65 moveto 17.5 (3.2) alignedtext
+grestore
+% studenterhytta--brunkollen
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 744.82 436.58 moveto
+840.71 428 1022.82 411.7 1111.27 403.78 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+915.8 424.58 moveto 24.5 (13.9) alignedtext
+grestore
+% studenterhytta--bjornholdt
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 680.24 460.15 moveto
+676.23 490.27 668.19 550.53 664.15 580.83 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+673.45 515.89 moveto 17.5 (4.2) alignedtext
+grestore
+% studenterhytta--kobberhaug
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 685.94 460.26 moveto
+686.9 465.49 687.94 471.2 688.89 476.45 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+688.67 461.75 moveto 17.5 (1.5) alignedtext
+grestore
+% studenterhytta--smedmyrkoia
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 679.69 423.92 moveto
+668.4 354.31 628.08 105.65 616.81 36.16 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+622 226.44 moveto 24.5 (10.5) alignedtext
+grestore
+% studenterhytta--venas
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 697.06 424.32 moveto
+745.9 363.91 904.76 167.43 952.03 108.97 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+824.55 271.04 moveto 23.99 (11.7) alignedtext
+grestore
+% bjornholdt--kobberhaug
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 667.03 580.94 moveto
+672.63 561.79 681.4 531.81 686.97 512.74 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+679.25 544.24 moveto 17.5 (2.9) alignedtext
+grestore
+% bjornholdt--smedmyrkoia
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 660.23 581.08 moveto
+653.11 494.59 622.5 122.77 615.36 36.11 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+612.54 303.99 moveto 24.5 (14.0) alignedtext
+grestore
+% bjornholdt--kikut
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 676.84 616.37 moveto
+703.34 646.6 757.83 708.77 783.8 738.39 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+711.57 679.78 moveto 17.5 (5.4) alignedtext
+grestore
+% bjornholdt--gorja
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 626.09 612.15 moveto
+558.68 636.81 413.9 689.79 354.8 711.42 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+477.7 645.18 moveto 17.5 (7.2) alignedtext
+grestore
+% mellomkollen
+gsave
+1 setlinewidth
+0 0 0 nodecolor
+531.18 894.45 64.52 18 ellipse_path stroke
+0 0 0 nodecolor
+14 /Times-Roman set_font
+492.3 888.85 moveto 77.77 (mellomkollen) alignedtext
+grestore
+% mellomkollen--fagervann
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 530.36 876.41 moveto
+528.35 832.7 523.25 721.48 521.24 677.7 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+527.05 771.46 moveto 17.5 (5.3) alignedtext
+grestore
+% mellomkollen--tomte
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 517.22 876.63 moveto
+513.41 871.76 509.3 866.51 505.54 861.72 curveto
+stroke
+0 0 0 edgecolor
+14 /Times-Roman set_font
+512.63 855.57 moveto 17.5 (1.8) alignedtext
+grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+%%Pages: 1
+%%BoundingBox: 36 36 1258 956
+end
+restore
+%%EOF
