@@ -9,43 +9,32 @@ import junit.framework.Assert;
 
 import no.kriska.marka.graph.Graph;
 import no.kriska.marka.graph.GraphFactory1;
+import no.kriska.marka.graph.GraphFactory2;
 import no.kriska.marka.graph.Rute;
 
 import org.junit.Test;
 
-public class RouteServiceTest {
+public class RouteService2Test {
 
-	@Test
-	public void skalFinneRuteGjennomMikroGraph() {
-
-		Graph graph = new GraphFactory1().mikroGraph();
-
-		RouteService routeService = new RouteService();
-		Collection<Rute> ruter = routeService.optimalRoute(graph, 40);
-
-		List<String> expected = Arrays
-				.asList("Rute: 21 poeng - 10.6 km - sognsvann - ullevalseter - sognsvann", //
-						"Rute: 33 poeng - 16.4 km - sognsvann - fagervann - sognsvann", //
-						"Rute: 54 poeng - 17.4 km - sognsvann - ullevalseter - fagervann - sognsvann");
-		assertList(expected, ruter);
-	}
 
 	@Test
 	public void skalFinneRuteGjennomMiniGraph() {
 
-		Graph graph = new GraphFactory1().miniGraph();
+		Graph graph = new GraphFactory2().miniGraph();
 
 		RouteService routeService = new RouteService();
 		Collection<Rute> ruter = routeService.optimalRoute(graph, 40);
-
+		
+		for(Rute rute: ruter) {
+			System.out.println("Rute " + rute);
+		}
+		
 		List<String> expected = Arrays
-				.asList("Rute: 23 poeng - 10.2 km - sognsvann - skjennungstua - sognsvann", //
-						"Rute: 44 poeng - 12.7 km - sognsvann - skjennungstua - ullevalseter - sognsvann", //
-						"Rute: 54 poeng - 17.4 km - sognsvann - ullevalseter - fagervann - sognsvann", //
-						"Rute: 58 poeng - 17.8 km - sognsvann - skjennungstua - studenterhytta - skjennungstua - sognsvann", //
-						"Rute: 79 poeng - 18.5 km - sognsvann - skjennungstua - studenterhytta - ullevalseter - sognsvann", //
-						"Rute: 91 poeng - 24.9 km - sognsvann - skjennungstua - studenterhytta - fagervann - sognsvann", //
-						"Rute: 112 poeng - 25.3 km - sognsvann - skjennungstua - studenterhytta - ullevalseter - fagervann - sognsvann");
+				.asList("Rute: 23 poeng - 9.8 km - sognsvann - skjennungstua - sognsvann", //
+						"Rute: 44 poeng - 12.4 km - sognsvann - skjennungstua - ullevalseter - sognsvann", //
+						"Rute: 58 poeng - 17.4 km - sognsvann - skjennungstua - studenterhytta - skjennungstua - sognsvann", //
+						"Rute: 79 poeng - 18.2 km - sognsvann - skjennungstua - studenterhytta - ullevalseter - sognsvann", //
+						"Rute: 112 poeng - 26.0 km - sognsvann - skjennungstua - studenterhytta - ullevalseter - fagervann - ullevalseter - sognsvann");
 		assertList(expected, ruter);
 	}
 

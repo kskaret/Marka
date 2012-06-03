@@ -7,14 +7,23 @@ public class Sti {
 	private Post postA;
 	private Post postB;
 	private double lengde;
+	private double abFaktor;
+	private double baFaktor;
 	private boolean rute;
 	private boolean gattFraA;
 	private boolean gattFraB;
 
 	public Sti(Post fra, Post til, double lengde) {
+		this(fra, til, lengde, 1.0, 1.0);
+	}
+
+	public Sti(Post fra, Post til, double lengde, double abFaktor,
+			double baFaktor) {
 		this.postA = fra;
 		this.postB = til;
 		this.lengde = lengde;
+		this.abFaktor = abFaktor;
+		this.baFaktor = baFaktor;
 		this.rute = false;
 		fra.leggTilSti(this);
 		til.leggTilSti(this);

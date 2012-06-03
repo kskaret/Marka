@@ -9,7 +9,7 @@ import java.util.Set;
 import junit.framework.Assert;
 
 import no.kriska.marka.graph.Graph;
-import no.kriska.marka.graph.GraphFactory;
+import no.kriska.marka.graph.GraphFactory1;
 import no.kriska.marka.graph.Post;
 import no.kriska.marka.graph.Rute;
 
@@ -20,7 +20,7 @@ public class PathHomeServiceTest {
 	@Test
 	public void skalFinneShortestPathHomeIMikroGraph() {
 		PathHomeService pathHomeService = new PathHomeService();
-		Graph graph = new GraphFactory().mikroGraph();
+		Graph graph = new GraphFactory1().mikroGraph();
 
 		Set<Post> poster = pathHomeService.shortestPathsHome(graph);
 		for (Post post : poster) {
@@ -31,7 +31,7 @@ public class PathHomeServiceTest {
 	@Test
 	public void skalFinneShortestPathHomeIMiniGraph() {
 		PathHomeService pathHomeService = new PathHomeService();
-		Graph graph = new GraphFactory().miniGraph();
+		Graph graph = new GraphFactory1().miniGraph();
 
 		Set<Post> poster = pathHomeService.shortestPathsHome(graph);
 		for (Post post : poster) {
@@ -42,7 +42,7 @@ public class PathHomeServiceTest {
 	@Test
 	public void skalFinneShortestPathHomeIFullGraph() {
 		PathHomeService pathHomeService = new PathHomeService();
-		Graph graph = new GraphFactory().fullGraph();
+		Graph graph = new GraphFactory1().fullGraph();
 
 		Set<Post> poster = pathHomeService.shortestPathsHome(graph);
 		for (Post post : poster) {

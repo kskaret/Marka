@@ -20,4 +20,11 @@ public class GraphBuilder {
 		return graph;		
 	}
 
+	public GraphBuilder sti(Post fra, Post til, double lengde,
+			double abFaktor, double baFaktor) {
+		Sti sti = new Sti(fra, til, lengde, abFaktor, baFaktor);
+		graph.leggTilSti(sti);
+		return this;
+	}
+
 }
