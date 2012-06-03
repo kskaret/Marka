@@ -16,7 +16,6 @@ import org.junit.Test;
 
 public class RouteService2Test {
 
-
 	@Test
 	public void skalFinneRuteGjennomMiniGraph() {
 
@@ -24,15 +23,13 @@ public class RouteService2Test {
 
 		RouteService routeService = new RouteService();
 		Collection<Rute> ruter = routeService.optimalRoute(graph, 40);
-		
-		for(Rute rute: ruter) {
+
+		for (Rute rute : ruter) {
 			System.out.println("Rute " + rute);
 		}
-		
+
 		List<String> expected = Arrays
-				.asList("Rute: 23 poeng - 9.8 km - sognsvann - skjennungstua - sognsvann", //
-						"Rute: 44 poeng - 12.4 km - sognsvann - skjennungstua - ullevalseter - sognsvann", //
-						"Rute: 58 poeng - 17.4 km - sognsvann - skjennungstua - studenterhytta - skjennungstua - sognsvann", //
+				.asList("Rute: 44 poeng - 12.4 km - sognsvann - skjennungstua - ullevalseter - sognsvann", //
 						"Rute: 79 poeng - 18.2 km - sognsvann - skjennungstua - studenterhytta - ullevalseter - sognsvann", //
 						"Rute: 112 poeng - 26.0 km - sognsvann - skjennungstua - studenterhytta - ullevalseter - fagervann - ullevalseter - sognsvann");
 		assertList(expected, ruter);
@@ -41,47 +38,29 @@ public class RouteService2Test {
 	@Test
 	public void skalFinneRuteGjennomFullGraph() {
 
-		Graph graph = new GraphFactory1().fullGraph();
+		Graph graph = new GraphFactory2().fullGraph();
 
 		RouteService routeService = new RouteService();
-		Collection<Rute> ruter = routeService.optimalRoute(graph, 30);
+		Collection<Rute> ruter = routeService.optimalRoute(graph, 60);
 
-		List<String> expected = Arrays
-				.asList("Rute: 23 poeng - 10.2 km - sognsvann - skjennungstua - sognsvann", //
-						"Rute: 44 poeng - 12.7 km - sognsvann - skjennungstua - ullevalseter - sognsvann", //
-						"Rute: 58 poeng - 17.8 km - sognsvann - skjennungstua - studenterhytta - skjennungstua - sognsvann", //
-						"Rute: 79 poeng - 18.5 km - sognsvann - skjennungstua - studenterhytta - ullevalseter - sognsvann", //
-						"Rute: 138 poeng - 20.8 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - studenterhytta - skjennungstua - sognsvann", //
-						"Rute: 159 poeng - 21.5 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - studenterhytta - ullevalseter - sognsvann", //
-						"Rute: 183 poeng - 26.6 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - bjornholdt - kobberhaug - studenterhytta - skjennungstua - sognsvann", //
-						"Rute: 204 poeng - 27.3 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - bjornholdt - kobberhaug - studenterhytta - ullevalseter - sognsvann", //
-						"Rute: 237 poeng - 28.1 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - bjornholdt - fagervann - ullevalseter - sognsvann");
-
-		assertList(expected, ruter);
+		for (Rute rute : ruter) {
+			System.out.println("Rute " + rute);
+		}
 	}
-	
+
 	@Test
 	public void skalFinneFullRute() {
 
-		Graph graph = new GraphFactory1().fullGraph();
+		Graph graph = new GraphFactory2().fullGraph();
 
 		RouteService routeService = new RouteService();
-		Collection<Rute> ruter = routeService.optimalRoute(graph, 162.7);
+		Collection<Rute> ruter = routeService.optimalRoute(graph, 265);
 	}
-	
-	
-	@Test
-	public void skalFinneFullRuteUtenBrunkollenSaeteren() {
 
-		Graph graph = new GraphFactory1().utenBrunkollenSaeteren();
-
-		RouteService routeService = new RouteService();
-		Collection<Rute> ruter = routeService.optimalRoute(graph, 162.7);
-	}
 	
 	@Test
 	public void skalTegneGraph() {
-		Graph graph = new GraphFactory1().fullGraph();
+		Graph graph = new GraphFactory2().fullGraph();
 
 		new Sorenskriver().write("fulLGraph.dot", graph.toString());
 	}

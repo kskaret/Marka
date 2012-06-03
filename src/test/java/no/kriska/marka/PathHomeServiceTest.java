@@ -24,7 +24,7 @@ public class PathHomeServiceTest {
 
 		Set<Post> poster = pathHomeService.shortestPathsHome(graph);
 		for (Post post : poster) {
-			System.out.println(post.getKortesteVei() + " " + post);
+			System.out.println(post.getKortesteVeiKmf() + " " + post);
 		}
 	}
 
@@ -35,7 +35,7 @@ public class PathHomeServiceTest {
 
 		Set<Post> poster = pathHomeService.shortestPathsHome(graph);
 		for (Post post : poster) {
-			System.out.println(post.getKortesteVei() + " " + post);
+			System.out.println(post.getKortesteVeiKmf() + " " + post);
 		}
 	}
 
@@ -46,7 +46,7 @@ public class PathHomeServiceTest {
 
 		Set<Post> poster = pathHomeService.shortestPathsHome(graph);
 		for (Post post : poster) {
-			System.out.println(post.getKortesteVei() + " " + post);
+			System.out.println(post.getKortesteVeiKmf() + " " + post);
 		}
 	}
 }

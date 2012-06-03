@@ -14,16 +14,14 @@ public class Rutenotater {
 	TreeSet<Rute> aktuelleRuter;
 	Sorenskriver sorenskriver;
 
-	
-
 	public Rutenotater() {
 		aktuelleRuter = new TreeSet<Rute>();
 		sorenskriver = new Sorenskriver();
 	}
 
-	public void noter(int poeng, double distanse, String beskrivelse) {
-		Rute nyRute = new Rute(poeng, distanse, beskrivelse);
-	
+	public void noter(int poeng, double kmf, double distanse, String beskrivelse) {
+		Rute nyRute = new Rute(poeng, kmf, distanse, beskrivelse);
+
 		if (!finnesKortereRuteMedFlerPoeng(nyRute)) {
 			slettLengreRuterMedFaerrePoeng(nyRute);
 			aktuelleRuter.add(nyRute);
@@ -44,7 +42,8 @@ public class Rutenotater {
 	private void lagreRaadataTilFil() {
 		StringBuilder sb = new StringBuilder();
 		for (Rute rute : aktuelleRuter) {
-			sb.append((int) (rute.getDistanse() * 10) + "\t" + rute.getPoeng()
+			sb.append((int) (rute.getKmf() * 10) + "\t"
+					+ (int) (rute.getDistanse() * 10) + "\t" + rute.getPoeng()
 					+ "\n");
 		}
 		sorenskriver.write("raaData.txt", sb.toString());
@@ -53,7 +52,7 @@ public class Rutenotater {
 	private void slettLengreRuterMedFaerrePoeng(Rute nyRute) {
 		List<Rute> ruterAaSlette = new ArrayList<Rute>();
 		for (Rute rute : aktuelleRuter.headSet(nyRute, true)) {
-			if (rute.getDistanse() >= nyRute.getDistanse()) {
+			if (rute.getKmf() >= nyRute.getKmf()) {
 				ruterAaSlette.add(rute);
 			}
 		}
@@ -69,7 +68,7 @@ public class Rutenotater {
 	public boolean finnesKortereRuteMedFlerPoeng(Rute nyRute) {
 		Rute ruteMedFlerPoeng = aktuelleRuter.ceiling(nyRute);
 		return ruteMedFlerPoeng != null
-				&& ruteMedFlerPoeng.getDistanse() <= nyRute.getDistanse();
+				&& ruteMedFlerPoeng.getKmf() <= nyRute.getKmf();
 	}
 
 }

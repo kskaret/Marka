@@ -9,43 +9,46 @@ import no.kriska.marka.graph.Rutenotater;
 public class Ryggsekk {
 
 	private int poeng;
+	private double kmf;
 	private double distanse;
 	private Post post;
 	private Ryggsekk forrigeRyggsekk = null;
 	private Rutenotater ruteNotater;
-	private double makslengde;
+	private double makskmf;
 
-	public Ryggsekk(Post post, double makslengde) {
+	public Ryggsekk(Post post, double maksKmf) {
 		this.poeng = 0;
+		this.kmf = 0;
 		this.distanse = 0;
 		this.post = post;
 		this.ruteNotater = new Rutenotater();
-		this.makslengde = makslengde;
+		this.makskmf = maksKmf;
 	}
 
-	private Ryggsekk(int poeng, double distanse, Rutenotater ruteNotater,
+	private Ryggsekk(int poeng, double kmf, double distanse, Rutenotater ruteNotater,
 			Post post, Ryggsekk forrigeRyggsekk) {
 		this.poeng = poeng;
+		this.kmf= kmf;
 		this.distanse = distanse;
 		this.ruteNotater = ruteNotater;
 		this.post = post;
 		this.forrigeRyggsekk = forrigeRyggsekk;
-		this.makslengde = forrigeRyggsekk.makslengde;
+		this.makskmf = forrigeRyggsekk.makskmf;
 	}
 
 	public int getPoeng() {
 		return poeng;
 	}
 
-	public double getDistanse() {
-		return distanse;
+	public double getKmf() {
+		return kmf;
 	}
 
 	public void noterRute() {
-		if (poeng == 2227 && distanse < makslengde) {
-			System.out.println("NY MAKSLENGDE " + distanse);
+		if (poeng == 2227 && kmf < makskmf) {
+			System.out.println("NY MAKSLENGDE " + kmf);
 		}
-		ruteNotater.noter(poeng, distanse, ruteBeskrivelse());
+		ruteNotater.noter(poeng, kmf, distanse, ruteBeskrivelse());
 	}
 
 	public String ruteBeskrivelse() {
@@ -62,8 +65,8 @@ public class Ryggsekk {
 		return ruteNotater.ruter();
 	}
 
-	public Ryggsekk fyll(int p, double d, Post post) {
-		return new Ryggsekk(poeng + p, sum(distanse, d), ruteNotater, post,
+	public Ryggsekk fyll(int p, double dKmf, double dDistanse, Post post) {
+		return new Ryggsekk(poeng + p, sum(kmf, dKmf), sum(distanse, dDistanse), ruteNotater, post,
 				this);
 	}
 
@@ -71,7 +74,7 @@ public class Ryggsekk {
 		return (((int) (d1 * 10)) + ((int) (d2 * 10))) / 10.0;
 	}
 
-	public boolean overMakslengde(double kortesteVeiHjem) {
-		return distanse + kortesteVeiHjem > makslengde;
+	public boolean overMaksKmf(double kortesteVeiHjem) {
+		return kmf + kortesteVeiHjem > makskmf;
 	}
 }

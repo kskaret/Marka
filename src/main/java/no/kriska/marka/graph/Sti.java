@@ -55,27 +55,22 @@ public class Sti {
 	}
 
 	public void gaaFra(Post fra, Ryggsekk ryggsekk) {
-			if (postA.equals(fra)) {
-				gattFraA = true;
-				postB.besoek(ryggsekk, lengde);
-				gattFraA = false;
-			} else if (postB.equals(fra)) {
-				gattFraB = true;
-				postA.besoek(ryggsekk, lengde);
-				gattFraB = false;
-			}
-	}
-
-
-	public double getLengde() {
-		return lengde;
-	}
-
-	public void finnKortesteVei(Post fra, double distanse) {
 		if (postA.equals(fra)) {
-			postB.finnKorteteVei(distanse + lengde);
+			gattFraA = true;
+			postB.besoek(ryggsekk, lengde * abFaktor, lengde);
+			gattFraA = false;
+		} else if (postB.equals(fra)) {
+			gattFraB = true;
+			postA.besoek(ryggsekk, lengde * baFaktor, lengde);
+			gattFraB = false;
+		}
+	}
+
+	public void finnKortesteVeiFkm(Post fra, double fkm) {
+		if (postA.equals(fra)) {
+			postB.finnKorteteVeiKmf(fkm + lengde * abFaktor);
 		} else {
-			postA.finnKorteteVei(distanse + lengde);
+			postA.finnKorteteVeiKmf(fkm + lengde * baFaktor);
 		}
 	}
 
@@ -86,9 +81,9 @@ public class Sti {
 	public Post getPostB() {
 		return postB;
 	}
-	
-	public Post getMotsatt(Post post){
-		if(post.equals(postA)) {
+
+	public Post getMotsatt(Post post) {
+		if (post.equals(postA)) {
 			return postB;
 		} else {
 			return postA;

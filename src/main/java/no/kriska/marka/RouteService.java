@@ -10,15 +10,15 @@ import no.kriska.marka.graph.Sti;
 
 public class RouteService {
 
-	public Collection<Rute> optimalRoute(Graph graph, double makslengde) {
+	public Collection<Rute> optimalRoute(Graph graph, double maksKmf) {
 		Date startTid = new Date();
 
 		Post start = graph.getStart();
 
 		// beregn korteste vei hjem for alle noder
-		start.finnKorteteVei(0);
+		start.finnKorteteVeiKmf(0);
 
-		Ryggsekk ryggsekk = new Ryggsekk(start, makslengde);
+		Ryggsekk ryggsekk = new Ryggsekk(start, maksKmf);
 
 		for (Sti sti : start.stier()) {
 			sti.gaaFra(start, ryggsekk);

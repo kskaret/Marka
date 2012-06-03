@@ -17,7 +17,7 @@ public class Post implements Comparable<Post> {
 	private List<Sti> stier;
 	private boolean maal;
 	private int besoekt;
-	private double kortesteVei;
+	private double kortesteVeiKmf;
 
 	public Post(String navn, int poeng) {
 		this.navn = navn;
@@ -25,7 +25,7 @@ public class Post implements Comparable<Post> {
 		stier = new ArrayList<Sti>();
 		maal = false;
 		besoekt = 0;
-		kortesteVei = Double.MAX_VALUE;
+		kortesteVeiKmf = Double.MAX_VALUE;
 	}
 
 	public void setMaal() {
@@ -34,13 +34,6 @@ public class Post implements Comparable<Post> {
 
 	public void leggTilSti(Sti sti) {
 		stier.add(sti);
-		Collections.sort(stier, new Comparator<Sti>() {
-
-			@Override
-			public int compare(Sti o1, Sti o2) {
-				return (int) (o1.getLengde() * 10 - o2.getLengde() * 10);
-			}
-		});
 	}
 
 	public String toString() {
@@ -51,9 +44,9 @@ public class Post implements Comparable<Post> {
 		return stier;
 	}
 
-	public void besoek(Ryggsekk ryggsekk, double distanse) {
-		Ryggsekk nyRyggsekk = ryggsekk.fyll(getPoeng(), distanse, this);
-		if (nyRyggsekk.overMakslengde(kortesteVei)) {
+	public void besoek(Ryggsekk ryggsekk, double kmf, double distanse) {
+		Ryggsekk nyRyggsekk = ryggsekk.fyll(getPoeng(), kmf, distanse, this);
+		if (nyRyggsekk.overMaksKmf(kortesteVeiKmf)) {
 			return;
 		}
 		if (maal) {
@@ -63,19 +56,13 @@ public class Post implements Comparable<Post> {
 
 			List<Sti> tilbakeStier = new ArrayList<Sti>();
 			for (Sti sti : stier) {
-				// utsett gaa tilbake langs stier
-				if (sti.gattTil(this)) {
-					tilbakeStier.add(sti);
-				} else if (!sti.gattFra(this)) {
+				// ikke gaa tilbake langs stier
+				if (!sti.gattTil(this)) {
 					// ikke gaa til post som er bes¿kt (bortsett fra tilbake)
 					if (sti.getMotsatt(this).besoekt == 0) {
 						sti.gaaFra(this, nyRyggsekk);
+
 					}
-				}
-			}
-			for (Sti sti : tilbakeStier) {
-				if (!sti.gattFra(this) && meningsfultAaGaaTilbake(sti)) {
-					sti.gaaFra(this, nyRyggsekk);
 				}
 			}
 
@@ -83,14 +70,6 @@ public class Post implements Comparable<Post> {
 		}
 	}
 
-	private boolean meningsfultAaGaaTilbake(Sti sti) {
-		Post motsatt = sti.getMotsatt(this);
-		if (Utils.cleanDouble(motsatt.getKortesteVei() + sti.getLengde()) <= kortesteVei) {
-			return true;
-		} else {
-			return false;
-		}
-	}
 
 	private int getPoeng() {
 		if (besoekt > 0) {
@@ -104,17 +83,17 @@ public class Post implements Comparable<Post> {
 		return navn.equals(annen.toString());
 	}
 
-	public void finnKorteteVei(double distanse) {
-		if (distanse < kortesteVei) {
-			kortesteVei = distanse;
+	public void finnKorteteVeiKmf(double kmf) {
+		if (kmf < kortesteVeiKmf) {
+			kortesteVeiKmf = kmf;
 			for (Sti sti : stier) {
-				sti.finnKortesteVei(this, distanse);
+				sti.finnKortesteVeiFkm(this, kmf);
 			}
 		}
 	}
 
-	public double getKortesteVei() {
-		return cleanDouble(kortesteVei);
+	public double getKortesteVeiKmf() {
+		return cleanDouble(kortesteVeiKmf);
 	}
 
 	@Override

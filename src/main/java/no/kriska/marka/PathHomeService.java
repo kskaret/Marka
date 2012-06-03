@@ -9,7 +9,7 @@ public class PathHomeService {
 
 	public Set<Post> shortestPathsHome(Graph graph) {
 		Post start = graph.getStart();
-		start.finnKorteteVei(0);
+		start.finnKorteteVeiKmf(0);
 
 		return graph.poster();
 	}
