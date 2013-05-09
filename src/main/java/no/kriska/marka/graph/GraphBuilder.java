@@ -13,11 +13,7 @@ public class GraphBuilder {
 		return this;
 	}
 
-	public GraphBuilder sti(Post fra, Post til, double lengde) {
-		Sti sti = new Sti(fra, til, lengde);
-		graph.leggTilSti(sti);
-		return this;
-	}
+
 
 	public Graph build() {
 		return graph;

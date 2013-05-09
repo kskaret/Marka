@@ -8,7 +8,7 @@ import no.kriska.marka.graph.Post;
 
 import org.junit.Test;
 
-public class PathHomeServiceTest {
+public class KortesteVeiTest {
 
 	@Test
 	public void skalFinneShortestPathHomeIMiniGraph() {

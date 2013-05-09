@@ -18,9 +18,9 @@ public class GraphBuilderTest {
 
 		Graph graph = new GraphBuilder() //
 				.start(sognsvann) //
-				.sti(sognsvann, ullevalseter, 5.3) //
-				.sti(ullevalseter, fagervann, 3.9) //
-				.sti(fagervann, sognsvann, 8.2) //
+				.sti(sognsvann, ullevalseter, 5.3, 1.0, 1.0) //
+				.sti(ullevalseter, fagervann, 3.9, 1.0, 1.0) //
+				.sti(fagervann, sognsvann, 8.2, 1.0, 1.0) //
 				.build();
 		System.out.println(graph);
 		

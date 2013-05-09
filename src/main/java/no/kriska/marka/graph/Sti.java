@@ -14,9 +14,7 @@ public class Sti {
 	private boolean gattFraB;
 	private boolean skalGaa;
 
-	public Sti(Post fra, Post til, double lengde) {
-		this(fra, til, lengde, 1.0, 1.0);
-	}
+
 
 	public Sti(Post fra, Post til, double lengde, double abFaktor,
 			double baFaktor) {
