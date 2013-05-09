@@ -3,7 +3,7 @@ package no.kriska.marka;
 import java.util.Set;
 
 import no.kriska.marka.graph.Graph;
-import no.kriska.marka.graph.GraphFactory2;
+import no.kriska.marka.graph.GraphFactory;
 import no.kriska.marka.graph.Post;
 
 import org.junit.Test;
@@ -12,7 +12,7 @@ public class KortesteVeiTest {
 
 	@Test
 	public void skalFinneShortestPathHomeIMiniGraph() {
-		Graph graph = new GraphFactory2().miniGraph();
+		Graph graph = new GraphFactory().miniGraph();
 
 		Set<Post> poster = shortestPathsHome(graph);
 		for (Post post : poster) {
@@ -23,7 +23,7 @@ public class KortesteVeiTest {
 
 	@Test
 	public void skalFinneShortestPathHomeIFullGraph() {
-		Graph graph = new GraphFactory2().fullGraph();
+		Graph graph = new GraphFactory().fullGraph();
 
 		Set<Post> poster = shortestPathsHome(graph);
 		for (Post post : poster) {
