@@ -111,7 +111,7 @@ public class GraphFactory2 {
 				//.skalBesoke(sognsvann, skjennungstua, studenterhytta, kobberhaug, kikut, gorja)//
 				//.skalBesoke(sognsvann, skjennungstua, studenterhytta, kobberhaug, kikut, oppkuven)//
 				//.skalBesoke(sognsvann, skjennungstua, studenterhytta, kobberhaug, kikut, smedmyrkoia)//
-				.skalBesoke(sognsvann, skjennungstua, studenterhytta, kobberhaug, smedmyrkoia, oppkuven, kikut, gorja)//
+				//.skalBesoke(sognsvann, skjennungstua, studenterhytta, kobberhaug, smedmyrkoia, oppkuven, kikut, gorja)//
 				//.skalBesoke(sognsvann, skjennungstua, studenterhytta, kobberhaug, smedmyrkoia, kikut)//
 				//.skalBesoke(sognsvann, skjennungstua, studenterhytta, kobberhaug, smedmyrkoia, oppkuven)//
 				//.skalBesoke(sognsvann, skjennungstua, studenterhytta, kobberhaug, smedmyrkoia, myrseter)//

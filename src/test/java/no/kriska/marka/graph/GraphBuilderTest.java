@@ -30,6 +30,5 @@ public class GraphBuilderTest {
 				+ "fagervann -- sognsvann [len=8.2, label=8.2]\n" + "}",
 				graph.toString());
 
-		// new Sorenskriver().write("testgraph.dot", graph.toString());
 	}
 }
