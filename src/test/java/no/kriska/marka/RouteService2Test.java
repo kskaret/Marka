@@ -22,10 +22,6 @@ public class RouteService2Test {
 		RouteService routeService = new RouteService();
 		Collection<Rute> ruter = routeService.optimalRoute(graph, 50);
 
-		for (Rute rute : ruter) {
-			System.out.println("Rute " + rute);
-		}
-
 		List<String> expected = Arrays
 				.asList("Rute: 44 poeng - 17.5 kmf - 12.4 km - sognsvann - ullevalseter - skjennungstua - sognsvann", //
 						"Rute: 79 poeng - 25.6 kmf - 18.2 km - sognsvann - ullevalseter - studenterhytta - skjennungstua - sognsvann", //
@@ -33,18 +29,35 @@ public class RouteService2Test {
 		assertList(expected, ruter);
 	}
 
-
 	@Test
-	public void skalFinneFullRute() {
-
+	public void skalFinneKorteRuterGjennomFullGraph() {
 		Graph graph = new GraphFactory2().fullGraph();
 
 		RouteService routeService = new RouteService();
+		Collection<Rute> ruter = routeService.optimalRoute(graph, 80);
 
-		Collection<Rute> ruter = routeService.optimalRoute(graph, 275);
+		List<String> expected = Arrays
+				.asList("Rute: 44 poeng - 18.0 kmf - 12.2 km - sognsvann - skjennungstua - ullevalseter - sognsvann",//
+						"Rute: 79 poeng - 25.5 kmf - 18.1 km - sognsvann - skjennungstua - studenterhytta - ullevalseter - sognsvann",//
+						"Rute: 112 poeng - 40.0 kmf - 25.8 km - sognsvann - skjennungstua - studenterhytta - fagervann - ullevalseter - sognsvann",//
+						"Rute: 192 poeng - 42.3 kmf - 27.3 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - fagervann - ullevalseter - sognsvann",//
+						"Rute: 237 poeng - 44.2 kmf - 27.4 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - bjornholdt - fagervann - ullevalseter - sognsvann",//
+						"Rute: 268 poeng - 48.0 kmf - 31.1 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - bjornholdt - liggeren - fagervann - ullevalseter - sognsvann",//
+						"Rute: 348 poeng - 54.9 kmf - 33.6 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - bjornholdt - liggeren - tomte - fagervann - ullevalseter - sognsvann",//
+						"Rute: 363 poeng - 58.5 kmf - 38.0 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - kikut - gorja - liggeren - fagervann - ullevalseter - sognsvann",//
+						"Rute: 376 poeng - 59.0 kmf - 36.2 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - bjornholdt - liggeren - tomte - mellomkollen - fagervann - ullevalseter - sognsvann",//
+						"Rute: 382 poeng - 60.1 kmf - 37.6 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - bjornholdt - gorja - tomte - fagervann - ullevalseter - sognsvann",//
+						"Rute: 412 poeng - 61.3 kmf - 39.5 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - kikut - gorja - tomte - fagervann - ullevalseter - sognsvann",//
+						"Rute: 413 poeng - 61.4 kmf - 38.7 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - bjornholdt - gorja - tomte - liggeren - fagervann - ullevalseter - sognsvann",//
+						"Rute: 443 poeng - 62.6 kmf - 40.6 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - kikut - gorja - tomte - liggeren - fagervann - ullevalseter - sognsvann",//
+						"Rute: 457 poeng - 67.1 kmf - 42.5 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - bjornholdt - kikut - gorja - tomte - fagervann - ullevalseter - sognsvann",//
+						"Rute: 471 poeng - 67.2 kmf - 43.0 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - kikut - gorja - mellomkollen - tomte - liggeren - fagervann - ullevalseter - sognsvann",//
+						"Rute: 488 poeng - 68.4 kmf - 43.6 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - bjornholdt - kikut - gorja - tomte - liggeren - fagervann - ullevalseter - sognsvann");
+
+		assertList(expected, ruter);
+
 	}
 
-	
 	@Test
 	public void skalTegneGraph() {
 		Graph graph = new GraphFactory2().fullGraph();
