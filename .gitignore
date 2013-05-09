@@ -5,3 +5,5 @@ target/
 aktuelleRuter.txt
 fullGraph.dot
 raaData.txt
+.DS_Store
+*~$*
