@@ -2,3 +2,6 @@
 .project
 *.zip
 target/
+aktuelleRuter.txt
+fullGraph.dot
+raaData.txt
