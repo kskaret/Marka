@@ -51,7 +51,6 @@ public class Post implements Comparable<Post> {
 		} else {
 			besoekt++;
 
-			List<Sti> tilbakeStier = new ArrayList<Sti>();
 			for (Sti sti : stier) {
 				// ikke gaa tilbake langs stier
 				if (!sti.gattTil(this)) {
