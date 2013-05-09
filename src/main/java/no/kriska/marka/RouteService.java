@@ -1,9 +1,7 @@
 package no.kriska.marka;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
-import java.util.List;
 
 import no.kriska.marka.graph.Graph;
 import no.kriska.marka.graph.Post;
