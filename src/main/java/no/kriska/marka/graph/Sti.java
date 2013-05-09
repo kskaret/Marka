@@ -32,7 +32,7 @@ public class Sti {
 
 	public String toString() {
 		// a -- b [len=1, label=1];
-		return postA + " -- " + postB + " [len=" + lengde / 2.0 + ", label="
+		return postA + " -- " + postB + " [len=" + lengde  + ", label="
 				+ lengde + "]\n";
 	}
 
