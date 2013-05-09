@@ -53,7 +53,7 @@ public class Post implements Comparable<Post> {
 
 			for (Sti sti : stier) {
 				// ikke gaa tilbake langs stier
-				if (!sti.gattTil(this)) {
+				if (!sti.erBrukt()) {
 					// ikke gaa til post som er bes¿kt (bortsett fra tilbake)
 					if (sti.getMotsatt(this).besoekt == 0) {
 						sti.gaaFra(this, nyRyggsekk);

@@ -10,7 +10,6 @@ import no.kriska.marka.graph.Graph;
 import no.kriska.marka.graph.GraphFactory2;
 import no.kriska.marka.graph.Rute;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
 public class RouteService2Test {
@@ -36,7 +35,6 @@ public class RouteService2Test {
 
 
 	@Test
-	@Ignore
 	public void skalFinneFullRute() {
 
 		Graph graph = new GraphFactory2().fullGraph();
