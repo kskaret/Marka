@@ -5,8 +5,6 @@ import java.util.Collection;
 import java.util.List;
 import java.util.TreeSet;
 
-import sun.tools.tree.LengthExpression;
-
 import no.kriska.marka.Sorenskriver;
 
 public class Rutenotater {

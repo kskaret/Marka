@@ -1,15 +1,15 @@
 package no.kriska.marka;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
 import junit.framework.Assert;
-
 import no.kriska.marka.graph.Graph;
-import no.kriska.marka.graph.GraphFactory1;
 import no.kriska.marka.graph.GraphFactory2;
+import no.kriska.marka.graph.Post;
 import no.kriska.marka.graph.Rute;
 
 import org.junit.Test;
@@ -54,7 +54,8 @@ public class RouteService2Test {
 		Graph graph = new GraphFactory2().fullGraph();
 
 		RouteService routeService = new RouteService();
-		Collection<Rute> ruter = routeService.optimalRoute(graph, 265);
+
+		Collection<Rute> ruter = routeService.optimalRoute(graph, 275);
 	}
 
 	

@@ -1,6 +1,8 @@
 package no.kriska.marka;
 
 import java.util.Collection;
+import java.util.LinkedList;
+import java.util.List;
 
 import no.kriska.marka.graph.Post;
 import no.kriska.marka.graph.Rute;
@@ -15,25 +17,29 @@ public class Ryggsekk {
 	private Ryggsekk forrigeRyggsekk = null;
 	private Rutenotater ruteNotater;
 	private double makskmf;
+	private List<Post> skalBesoke;
 
-	public Ryggsekk(Post post, double maksKmf) {
+	public Ryggsekk(Post post, double maksKmf, List<Post> skalBesoke) {
 		this.poeng = 0;
 		this.kmf = 0;
 		this.distanse = 0;
 		this.post = post;
 		this.ruteNotater = new Rutenotater();
 		this.makskmf = maksKmf;
+		this.skalBesoke = skalBesoke;
 	}
 
-	private Ryggsekk(int poeng, double kmf, double distanse, Rutenotater ruteNotater,
-			Post post, Ryggsekk forrigeRyggsekk) {
+	private Ryggsekk(int poeng, double kmf, double distanse,
+			Rutenotater ruteNotater, Post post, Ryggsekk forrigeRyggsekk,
+			List<Post> skalBesoke) {
 		this.poeng = poeng;
-		this.kmf= kmf;
+		this.kmf = kmf;
 		this.distanse = distanse;
 		this.ruteNotater = ruteNotater;
 		this.post = post;
 		this.forrigeRyggsekk = forrigeRyggsekk;
 		this.makskmf = forrigeRyggsekk.makskmf;
+		this.skalBesoke = skalBesoke;
 	}
 
 	public int getPoeng() {
@@ -66,8 +72,16 @@ public class Ryggsekk {
 	}
 
 	public Ryggsekk fyll(int p, double dKmf, double dDistanse, Post post) {
-		return new Ryggsekk(poeng + p, sum(kmf, dKmf), sum(distanse, dDistanse), ruteNotater, post,
-				this);
+		return new Ryggsekk(poeng + p, sum(kmf, dKmf),
+				sum(distanse, dDistanse), ruteNotater, post, this, nyAaBesoke());
+	}
+
+	private List<Post> nyAaBesoke() {
+		LinkedList<Post> nyAaBesoke = new LinkedList<Post>(skalBesoke);
+		if (!nyAaBesoke.isEmpty()) {
+			nyAaBesoke.remove(0);
+		}
+		return nyAaBesoke;
 	}
 
 	private double sum(double d1, double d2) {
@@ -77,4 +91,14 @@ public class Ryggsekk {
 	public boolean overMaksKmf(double kortesteVeiHjem) {
 		return kmf + kortesteVeiHjem > makskmf;
 	}
+
+	public boolean kanBesoke(Post fra) {
+		if (skalBesoke.isEmpty()) {
+			return true;
+		} else {
+			Post post = skalBesoke.get(0);
+			return (fra.equals(post));
+		}
+	}
+
 }

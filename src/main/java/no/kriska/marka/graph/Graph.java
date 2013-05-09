@@ -1,10 +1,10 @@
 package no.kriska.marka.graph;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.Stack;
 
 public class Graph {
 
@@ -12,9 +12,12 @@ public class Graph {
 
 	List<Sti> stier;
 
+	List<Post> skalBesoke;
+
 	public Graph(Post start) {
 		this.start = start;
 		stier = new ArrayList<Sti>();
+		this.skalBesoke = new ArrayList<Post>();
 	}
 
 	public String toString() {
@@ -43,6 +46,14 @@ public class Graph {
 			poster.add(sti.getPostB());
 		}
 		return poster;
+	}
+
+	public void setSkalBesoke(List<Post> skalBesoke) {
+		this.skalBesoke = skalBesoke;
+	}
+
+	public List<Post> getSkalBesoke() {
+		return skalBesoke;
 	}
 
 }

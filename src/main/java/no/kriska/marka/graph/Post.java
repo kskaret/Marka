@@ -3,12 +3,9 @@ package no.kriska.marka.graph;
 import static no.kriska.marka.Utils.cleanDouble;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 import no.kriska.marka.Ryggsekk;
-import no.kriska.marka.Utils;
 
 public class Post implements Comparable<Post> {
 

@@ -12,6 +12,7 @@ public class Sti {
 	private boolean rute;
 	private boolean gattFraA;
 	private boolean gattFraB;
+	private boolean skalGaa;
 
 	public Sti(Post fra, Post til, double lengde) {
 		this(fra, til, lengde, 1.0, 1.0);
@@ -55,14 +56,17 @@ public class Sti {
 	}
 
 	public void gaaFra(Post fra, Ryggsekk ryggsekk) {
-		if (postA.equals(fra)) {
-			gattFraA = true;
-			postB.besoek(ryggsekk, lengde * abFaktor, lengde);
-			gattFraA = false;
-		} else if (postB.equals(fra)) {
-			gattFraB = true;
-			postA.besoek(ryggsekk, lengde * baFaktor, lengde);
-			gattFraB = false;
+		if (ryggsekk.kanBesoke(fra)) {
+
+			if (postA.equals(fra)) {
+				gattFraA = true;
+				postB.besoek(ryggsekk, lengde * abFaktor, lengde);
+				gattFraA = false;
+			} else if (postB.equals(fra)) {
+				gattFraB = true;
+				postA.besoek(ryggsekk, lengde * baFaktor, lengde);
+				gattFraB = false;
+			}
 		}
 	}
 

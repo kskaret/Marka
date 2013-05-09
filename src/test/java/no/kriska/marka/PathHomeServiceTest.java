@@ -1,17 +1,10 @@
 package no.kriska.marka;
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
 import java.util.Set;
-
-import junit.framework.Assert;
 
 import no.kriska.marka.graph.Graph;
 import no.kriska.marka.graph.GraphFactory1;
 import no.kriska.marka.graph.Post;
-import no.kriska.marka.graph.Rute;
 
 import org.junit.Test;
 

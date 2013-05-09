@@ -44,65 +44,78 @@ public class GraphFactory2 {
 	public Graph fullGraph() {
 		return new GraphBuilder() //
 				.start(sognsvann) //
-				.sti(sognsvann, ullevalseter, 5.2, 1.65, 0.90) //
-				.sti(sognsvann, skjennungstua, 4.9, 2.39, 0.84) //
-				.sti(sognsvann, saeteren, 13.2, 1.18, 1.23) //
-				.sti(ullevalseter, skjennungstua, 2.3, 2.15, 0.71) //
-				.sti(ullevalseter, fagervann, 3.9, 2.30, 1.53) //
-				.sti(ullevalseter, studenterhytta, 4.3, 1.54, 1.23) //
-				.sti(ullevalseter, tomte, 8.2, 2.33, 1.75) //
-				.sti(skjennungstua, studenterhytta, 3.8, 1.11, 1.69) //
-				.sti(skjennungstua, brunkollen, 13.7, 1.4, 1.58) //
-				.sti(skjennungstua, saeteren, 14.1, 1.18, 1.79) //
-				.sti(skjennungstua, venas, 13.5, 1.4, 1.18) //
-				.sti(mellomkollen, tomte, 1.8, 1.4, 2.6) //
-				.sti(mellomkollen, gorja, 4.6, 1.32, 2.46) //
-				.sti(mellomkollen, fagervann, 5.3, 1.53, 2.39) //
-				.sti(liggeren, fagervann, 3.8, 2.2, 1.52)//
-				.sti(liggeren, bjornholdt, 5.4, 1.19, 1.04)//
-				.sti(liggeren, kikut, 6.6, 1.46, 1.38)//
-				.sti(liggeren, gorja, 3.2, 2.33, 1.91)//
-				.sti(liggeren, tomte, 1.8, 3.75, 0.94)//
-				.sti(fagervann, studenterhytta, 8.2, 1.4, 1.55)//
-				.sti(fagervann, bjornholdt, 5.5, 1.67, 2.04)//
-				.sti(fagervann, kobberhaug, 8.3, 1.48, 1.5)//
-				.sti(fagervann, tomte, 4.5, 2.11, 1.74)//
-				.sti(studenterhytta, kobberhaug, 1.5, 1.16, 2.15)//
-				.sti(studenterhytta, brunkollen, 13.9, 1.43, 1.46)//
-				.sti(studenterhytta, smedmyrkoia, 10.5, 1.25, 1.40)//
-				.sti(studenterhytta, venas, 11.7, 1.22, 1.36)//
-				.sti(bjornholdt, kikut, 5.4, 1.66, 1.69)//
-				.sti(bjornholdt, gorja, 7.2, 1.17, 1.14)//
-				.sti(bjornholdt, kobberhaug, 2.9, 2.67, 1.66)//
-				.sti(kikut, gorja, 6.8, 1.13, 1.06)//
-				.sti(kikut, kobberhaug, 5.2, 1.97, 1.48)//
-				.sti(kikut, smedmyrkoia, 13.6, 1.35, 1.37)//
-				.sti(kikut, oppkuven, 11.9, 1.98, 1.19)//
-				.sti(gorja, tomte, 4, 2.20, 1.42)//
-				.sti(kobberhaug, smedmyrkoia, 11.1, 1.39, 1.66)//
+				.sti(sognsvann, ullevalseter, 5.15, 1.75, 0.86) //
+				//.sti(sognsvann, saeteren, 13.35, 1.20, 1.26) //
+				.sti(sognsvann, skjennungstua, 4.9, 2.51, 0.79) //
+				.sti(ullevalseter, skjennungstua, 2.2, 2.44, 0.68) //
+				.sti(ullevalseter, fagervann, 3.85, 2.39, 1.61) //
+				.sti(ullevalseter, studenterhytta, 4.35, 1.44, 1.12) //
+				.sti(skjennungstua, studenterhytta, 3.8, 1.10, 1.76) //
+				.sti(skjennungstua, brunkollen, 13.7, 1.43, 1.64) //
+				.sti(skjennungstua, saeteren, 14.1, 1.18, 1.85) //
+				.sti(skjennungstua, venas, 13.5, 1.23, 1.58) //
+				.sti(mellomkollen, fagervann, 5.3, 1.58, 2.44) //
+				.sti(mellomkollen, tomte, 1.8, 1.31, 2.58) //
+				.sti(mellomkollen, gorja, 4.6, 1.27, 2.40) //
+				.sti(liggeren, fagervann, 3.8, 2.22, 1.52)//
+				.sti(liggeren, bjornholdt, 5.4, 1.21, 1.03)//
+				.sti(liggeren, kikut, 6.6, 1.67, 1.57)//
+				.sti(liggeren, gorja, 3.2, 2.38, 1.97)//
+				.sti(liggeren, tomte, 1.8, 3.66, 0.95)//
+				.sti(fagervann, studenterhytta, 8.2, 1.46, 1.62)//
+				.sti(fagervann, bjornholdt, 5.5, 1.50, 1.84)//
+				.sti(fagervann, kobberhaug, 8.3, 1.58, 1.60)//
+				.sti(fagervann, tomte, 4.5, 2.36, 1.96)//
+				.sti(studenterhytta, kobberhaug, 1.4, 1.69, 1.06)//
+				.sti(studenterhytta, brunkollen, 13.9, 1.36, 1.39)//
+				.sti(studenterhytta, smedmyrkoia, 10.4, 1.25, 1.43)//
+				.sti(studenterhytta, venas, 11.7, 1.38, 1.57)//
+				.sti(bjornholdt, kikut, 5.35, 1.54, 1.57)//
+				.sti(bjornholdt, gorja, 7.2, 1.19, 1.14)//
+				.sti(bjornholdt, kobberhaug, 2.9, 2.72, 1.74)//
+				.sti(kikut, gorja, 6.8, 1.08, 0.99)//
+				.sti(kikut, kobberhaug, 5.2, 1.93, 1.44)//
+				.sti(kikut, smedmyrkoia, 13.6, 1.39, 1.41)//
+				.sti(kikut, oppkuven, 11.9, 2.12, 1.24)//
+				.sti(gorja, tomte, 4, 2.19, 1.40)//
+				.sti(kobberhaug, smedmyrkoia, 11.1, 1.26, 1.53)//
 				.sti(brunkollen, saeteren, 3.4, 1.01, 3.32)//
-				.sti(brunkollen, venas, 5.3, 1.66, 2.0)//
-				.sti(brunkollen, mustadkroken, 15.4, 1.68, 1.72)//
-				.sti(smedmyrkoia, venas, 9.5, 1.45, 1.5)//
+				.sti(brunkollen, venas, 5.3, 1.63, 1.97)//
+				.sti(brunkollen, mustadkroken, 15.4, 1.51, 1.55)//
+				.sti(smedmyrkoia, venas, 9.4, 1.61, 1.65)//
 				.sti(smedmyrkoia, myrseter, 13.9, 1.49, 1.52)//
-				.sti(smedmyrkoia, oppkuven, 4.9, 3.43, 0.96)//
-				.sti(smedmyrkoia, presthytta, 12.8, 1.8, 1.5)//
-				.sti(venas, mustadkroken, 14.7, 1.74, 1.72)//
-				.sti(venas, myrseter, 9.8, 1.44, 1.44)//
-				.sti(venas, presthytta, 9.2, 2.07, 1.54)//
-				.sti(mustadkroken, myrseter, 12.8, 1.73, 1.93)//
-				.sti(mustadkroken, jorgenhytta, 8.2, 1.29, 1.12)//
-				.sti(myrseter, presthytta, 3, 1.82, 0.92)//
-				.sti(myrseter, jorgenhytta, 7.9, 1.95, 1.43)//
-				.sti(oppkuven, presthytta, 11.6, 1.47, 2.31)//
-				.sti(oppkuven, gyrihaug, 11.4, 1.87, 1.97)//
-				.sti(oppkuven, sinnerdammen, 14.4, 1.1, 1.45)//
-				.sti(oppkuven, katnosdammen, 14.1, 1.12, 1.54)//
-				.sti(presthytta, gyrihaug, 6.5, 1.98, 0.97)//
-				.sti(gyrihaug, sinnerdammen, 15.0, 1.68, 2.08)//
-				.sti(sinnerdammen, pershusfjellet, 3.4, 2.17, 1.39)//
-				.sti(sinnerdammen, katnosdammen, 7.5, 1.74, 1.81)//
-				.sti(pershusfjellet, katnosdammen, 10.2, 1.67, 2.03)//
+				.sti(smedmyrkoia, oppkuven, 4.9, 3.33, 0.93)//
+				.sti(smedmyrkoia, presthytta, 12.8, 1.84, 1.52)//
+				.sti(venas, mustadkroken, 14.7, 1.72, 1.70)//
+				.sti(venas, myrseter, 9.8, 1.57, 1.56)//
+				.sti(venas, presthytta, 9.2, 2.02, 1.49)//
+				.sti(mustadkroken, myrseter, 12.8, 1.70, 1.91)//
+				.sti(mustadkroken, jorgenhytta, 8.2, 1.27, 1.07)//
+				.sti(myrseter, presthytta, 3, 1.86, 0.84)//
+				.sti(myrseter, jorgenhytta, 7.9, 2.09, 1.52)//
+				.sti(oppkuven, presthytta, 11.6, 1.34, 2.12)//
+				.sti(oppkuven, gyrihaug, 11.35, 1.69, 1.79)//
+				.sti(oppkuven, sinnerdammen, 14.4, 1.13, 1.54)//
+				.sti(oppkuven, katnosdammen, 14.1, 1.31, 1.84)//
+				.sti(presthytta, gyrihaug, 6.5, 2.09, 0.94)//
+				.sti(gyrihaug, sinnerdammen, 15.0, 1.33, 1.66)//
+				.sti(sinnerdammen, pershusfjellet, 3.4, 2.05, 1.29)//
+				.sti(sinnerdammen, katnosdammen, 7.5, 1.65, 1.71)//
+				.sti(pershusfjellet, katnosdammen, 10.2, 1.59, 1.95)//
+				//.skalBesoke(sognsvann, skjennungstua, studenterhytta, kobberhaug)//
+				//.skalBesoke(sognsvann, skjennungstua, studenterhytta, kobberhaug, bjornholdt)//
+				//.skalBesoke(sognsvann, skjennungstua, studenterhytta, kobberhaug, bjornholdt, liggeren)//
+				//.skalBesoke(sognsvann, skjennungstua, studenterhytta, kobberhaug, bjornholdt, kikut)//
+				//.skalBesoke(sognsvann, skjennungstua, studenterhytta, kobberhaug, bjornholdt, gorja)//
+				//.skalBesoke(sognsvann, skjennungstua, studenterhytta, kobberhaug, kikut)//						
+				//.skalBesoke(sognsvann, skjennungstua, studenterhytta, kobberhaug, kikut, gorja)//
+				//.skalBesoke(sognsvann, skjennungstua, studenterhytta, kobberhaug, kikut, oppkuven)//
+				//.skalBesoke(sognsvann, skjennungstua, studenterhytta, kobberhaug, kikut, smedmyrkoia)//
+				.skalBesoke(sognsvann, skjennungstua, studenterhytta, kobberhaug, smedmyrkoia, oppkuven, kikut, gorja)//
+				//.skalBesoke(sognsvann, skjennungstua, studenterhytta, kobberhaug, smedmyrkoia, kikut)//
+				//.skalBesoke(sognsvann, skjennungstua, studenterhytta, kobberhaug, smedmyrkoia, oppkuven)//
+				//.skalBesoke(sognsvann, skjennungstua, studenterhytta, kobberhaug, smedmyrkoia, myrseter)//
 				.build();
 	}
+
 }

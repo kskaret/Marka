@@ -1,0 +1,23 @@
+Rute: 312 poeng - 54.9 kmf - 35.0 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - kikut - bjornholdt - fagervann - ullevalseter - sognsvann
+* Rute: 363 poeng - 58.5 kmf - 38.0 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - kikut - gorja - liggeren - fagervann - ullevalseter - sognsvann
+* Rute: 412 poeng - 61.3 kmf - 39.5 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - kikut - gorja - tomte - fagervann - ullevalseter - sognsvann
+* Rute: 443 poeng - 62.6 kmf - 40.6 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - kikut - gorja - tomte - liggeren - fagervann - ullevalseter - sognsvann
+* Rute: 471 poeng - 67.2 kmf - 43.0 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - kikut - gorja - mellomkollen - tomte - liggeren - fagervann - ullevalseter - sognsvann
+Rute: 488 poeng - 70.8 kmf - 47.7 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - kikut - gorja - tomte - liggeren - bjornholdt - fagervann - ullevalseter - sognsvann
+Rute: 516 poeng - 75.4 kmf - 50.1 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - kikut - gorja - mellomkollen - tomte - liggeren - bjornholdt - fagervann - ullevalseter - sognsvann
+Rute: 606 poeng - 101.4 kmf - 63.5 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - kikut - oppkuven - smedmyrkoia - venas - brunkollen - saeteren - sognsvann
+Rute: 654 poeng - 111.0 kmf - 70.0 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - kikut - oppkuven - presthytta - venas - brunkollen - saeteren - sognsvann
+Rute: 792 poeng - 115.0 kmf - 73.6 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - kikut - oppkuven - presthytta - myrseter - venas - brunkollen - saeteren - sognsvann
+Rute: 855 poeng - 120.7 kmf - 76.2 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - kikut - oppkuven - gyrihaug - presthytta - venas - brunkollen - saeteren - sognsvann
+Rute: 993 poeng - 124.7 kmf - 79.8 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - kikut - oppkuven - gyrihaug - presthytta - myrseter - venas - brunkollen - saeteren - sognsvann
+* Rute: 1076 poeng - 134.7 kmf - 86.4 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - kikut - smedmyrkoia - oppkuven - gyrihaug - presthytta - myrseter - venas - brunkollen - saeteren - sognsvann
+Rute: 1099 poeng - 138.4 kmf - 90.0 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - kikut - oppkuven - presthytta - myrseter - jorgenhytta - mustadkroken - brunkollen - saeteren - sognsvann
+Rute: 1162 poeng - 146.7 kmf - 97.9 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - kikut - oppkuven - sinnerdammen - gyrihaug - presthytta - myrseter - venas - brunkollen - saeteren - sognsvann
+Rute: 1300 poeng - 148.1 kmf - 96.2 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - kikut - oppkuven - gyrihaug - presthytta - myrseter - jorgenhytta - mustadkroken - brunkollen - saeteren - sognsvann
+Rute: 1383 poeng - 158.1 kmf - 102.8 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - kikut - smedmyrkoia - oppkuven - gyrihaug - presthytta - myrseter - jorgenhytta - mustadkroken - brunkollen - saeteren - sognsvann
+Rute: 1442 poeng - 169.6 kmf - 107.4 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - kikut - smedmyrkoia - oppkuven - gyrihaug - presthytta - myrseter - jorgenhytta - mustadkroken - venas - brunkollen - saeteren - sognsvann
+Rute: 1469 poeng - 170.1 kmf - 114.3 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - kikut - oppkuven - sinnerdammen - gyrihaug - presthytta - myrseter - jorgenhytta - mustadkroken - brunkollen - saeteren - sognsvann
+Rute: 1475 poeng - 173.0 kmf - 111.2 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - kikut - oppkuven - katnosdammen - pershusfjellet - sinnerdammen - gyrihaug - presthytta - myrseter - venas - brunkollen - saeteren - sognsvann
+Rute: 1552 poeng - 180.1 kmf - 120.9 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - kikut - smedmyrkoia - oppkuven - sinnerdammen - gyrihaug - presthytta - myrseter - jorgenhytta - mustadkroken - brunkollen - saeteren - sognsvann
+Rute: 1558 poeng - 183.0 kmf - 117.8 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - kikut - smedmyrkoia - oppkuven - katnosdammen - pershusfjellet - sinnerdammen - gyrihaug - presthytta - myrseter - venas - brunkollen - saeteren - sognsvann
+Rute: 1600 poeng - 185.1 kmf - 121.5 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - kikut - oppkuven - katnosdammen - sinnerdammen - gyrihaug - presthytta - myrseter - jorgenhytta - mustadkroken - brunkollen - saeteren - sognsvann

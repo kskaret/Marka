@@ -1,0 +1,6 @@
+* Rute: 363 poeng - 58.5 kmf - 38.0 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - kikut - gorja - liggeren - fagervann - ullevalseter - sognsvann
+* Rute: 412 poeng - 61.3 kmf - 39.5 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - kikut - gorja - tomte - fagervann - ullevalseter - sognsvann
+* Rute: 443 poeng - 62.6 kmf - 40.6 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - kikut - gorja - tomte - liggeren - fagervann - ullevalseter - sognsvann
+* Rute: 471 poeng - 67.2 kmf - 43.0 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - kikut - gorja - mellomkollen - tomte - liggeren - fagervann - ullevalseter - sognsvann
+Rute: 488 poeng - 70.8 kmf - 47.7 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - kikut - gorja - tomte - liggeren - bjornholdt - fagervann - ullevalseter - sognsvann
+Rute: 516 poeng - 75.4 kmf - 50.1 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - kikut - gorja - mellomkollen - tomte - liggeren - bjornholdt - fagervann - ullevalseter - sognsvann
