@@ -41,8 +41,8 @@ public class Graph {
 	public Set<Post> poster() {
 		Set<Post> poster = new HashSet<Post>();
 		for (Sti sti : stier) {
-			poster.add(sti.getPostA());
-			poster.add(sti.getPostB());
+			poster.add(sti.getFra());
+			poster.add(sti.getTil());
 		}
 		return poster;
 	}

@@ -53,12 +53,9 @@ public class Post implements Comparable<Post> {
 				besoekt = true;
 
 				for (Sti sti : stier) {
-					// ikke gaa tilbake langs stier
-					if (!sti.erBrukt()) {
-						// ikke gaa til post som er besokt
-						if (!sti.getMotsatt(this).besoekt) {
-							sti.gaaFra(this, nyRyggsekk);
-						}
+					// ikke gaa til post som er besokt
+					if (!sti.getTil().besoekt) {
+						sti.gaa(nyRyggsekk);
 					}
 				}
 
@@ -75,7 +72,7 @@ public class Post implements Comparable<Post> {
 		if (kmf < kortesteVeiKmf) {
 			kortesteVeiKmf = kmf;
 			for (Sti sti : stier) {
-				sti.finnKortesteVeiKmf(this, kmf);
+				sti.finnKortesteVeiKmf(kmf);
 			}
 		}
 	}

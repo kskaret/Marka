@@ -4,30 +4,25 @@ import no.kriska.marka.Ryggsekk;
 
 public class Sti {
 
-	private Post postA;
-	private Post postB;
+	private Post fra;
+	private Post til;
 	private double lengde;
-	private double abFaktor;
-	private double baFaktor;
-
+	private double faktor;
 	private boolean brukt;
 
-	public Sti(Post fra, Post til, double lengde, double abFaktor,
-			double baFaktor) {
-		this.postA = fra;
-		this.postB = til;
+	public Sti(Post fra, Post til, double lengde, double abFaktor) {
+		this.fra = fra;
+		this.til = til;
 		this.lengde = lengde;
-		this.abFaktor = abFaktor;
-		this.baFaktor = baFaktor;
+		this.faktor = abFaktor;
 		this.brukt = false;
 
 		fra.leggTilSti(this);
-		til.leggTilSti(this);
 	}
 
 	public String toString() {
 		// a -- b [len=1, label=1];
-		return postA + " -- " + postB + " [len=" + lengde + ", label=" + lengde
+		return fra + " -- " + til + " [len=" + lengde + ", label=" + lengde
 				+ "]\n";
 	}
 
@@ -35,46 +30,22 @@ public class Sti {
 		return brukt;
 	}
 
-	public void gaaFra(Post fra, Ryggsekk ryggsekk) {
+	public void gaa(Ryggsekk ryggsekk) {
 		brukt = true;
-		if (postA.equals(fra)) {
-			postB.besoek(ryggsekk, abKmf(), lengde);
-		} else if (postB.equals(fra)) {
-			postA.besoek(ryggsekk, baKmf(), lengde);
-		}
+		til.besoek(ryggsekk, lengde * faktor, lengde);
 		brukt = false;
 	}
 
-	public void finnKortesteVeiKmf(Post fra, double kmf) {
-		if (postA.equals(fra)) {
-			postB.finnKorteteVeiKmf(kmf + abKmf());
-		} else {
-			postA.finnKorteteVeiKmf(kmf + baKmf());
-		}
+	public void finnKortesteVeiKmf(double kmf) {
+		til.finnKorteteVeiKmf(kmf + lengde * faktor);
 	}
 
-	private double abKmf() {
-		return lengde * abFaktor;
+	public Post getFra() {
+		return fra;
 	}
 
-	private double baKmf() {
-		return lengde * baFaktor;
-	}
-
-	public Post getPostA() {
-		return postA;
-	}
-
-	public Post getPostB() {
-		return postB;
-	}
-
-	public Post getMotsatt(Post post) {
-		if (post.equals(postA)) {
-			return postB;
-		} else {
-			return postA;
-		}
+	public Post getTil() {
+		return til;
 	}
 
 }

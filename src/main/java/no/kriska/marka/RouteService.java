@@ -17,11 +17,11 @@ public class RouteService {
 
 		// beregn korteste vei hjem for alle noder
 		start.finnKorteteVeiKmf(0);
-		
+
 		Ryggsekk ryggsekk = new Ryggsekk(start, maksKmf, graph.getSkalBesoke());
 
 		for (Sti sti : start.stier()) {
-			sti.gaaFra(start, ryggsekk);
+			sti.gaa(ryggsekk);
 		}
 
 		Date sluttTid = new Date();

@@ -22,8 +22,13 @@ public class RouteServiceTest {
 		RouteService routeService = new RouteService();
 		Collection<Rute> ruter = routeService.optimalRoute(graph, 50);
 
+		for (Rute rute : ruter) {
+			System.out.println(rute);
+		}
 		List<String> expected = Arrays
-				.asList("Rute: 44 poeng - 17.5 kmf - 12.4 km - sognsvann - ullevalseter - skjennungstua - sognsvann", //
+				.asList("Rute: 21 poeng - 13.1 kmf - 10.4 km - sognsvann - ullevalseter - sognsvann",//
+						"Rute: 23 poeng - 15.8 kmf - 9.8 km - sognsvann - skjennungstua - sognsvann",//
+						"Rute: 44 poeng - 17.5 kmf - 12.4 km - sognsvann - ullevalseter - skjennungstua - sognsvann", //
 						"Rute: 79 poeng - 25.6 kmf - 18.2 km - sognsvann - ullevalseter - studenterhytta - skjennungstua - sognsvann", //
 						"Rute: 112 poeng - 39.1 kmf - 26.0 km - sognsvann - skjennungstua - studenterhytta - fagervann - ullevalseter - sognsvann");
 		assertList(expected, ruter);
@@ -36,8 +41,14 @@ public class RouteServiceTest {
 		RouteService routeService = new RouteService();
 		Collection<Rute> ruter = routeService.optimalRoute(graph, 80);
 
+		for (Rute rute : ruter) {
+			System.out.println(rute);
+		}
+
 		List<String> expected = Arrays
-				.asList("Rute: 44 poeng - 18.0 kmf - 12.2 km - sognsvann - skjennungstua - ullevalseter - sognsvann",//
+				.asList("Rute: 21 poeng - 13.4 kmf - 10.2 km - sognsvann - ullevalseter - sognsvann", //
+						"Rute: 23 poeng - 16.0 kmf - 9.8 km - sognsvann - skjennungstua - sognsvann", //
+						"Rute: 44 poeng - 18.0 kmf - 12.2 km - sognsvann - skjennungstua - ullevalseter - sognsvann",//
 						"Rute: 79 poeng - 25.5 kmf - 18.1 km - sognsvann - skjennungstua - studenterhytta - ullevalseter - sognsvann",//
 						"Rute: 112 poeng - 40.0 kmf - 25.8 km - sognsvann - skjennungstua - studenterhytta - fagervann - ullevalseter - sognsvann",//
 						"Rute: 192 poeng - 42.3 kmf - 27.3 km - sognsvann - skjennungstua - studenterhytta - kobberhaug - fagervann - ullevalseter - sognsvann",//
