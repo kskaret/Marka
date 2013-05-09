@@ -13,7 +13,7 @@ public class Post implements Comparable<Post> {
 	private int poeng;
 	private List<Sti> stier;
 	private boolean maal;
-	private int besoekt;
+	private boolean besoekt;
 	private double kortesteVeiKmf;
 
 	public Post(String navn, int poeng) {
@@ -21,7 +21,7 @@ public class Post implements Comparable<Post> {
 		this.poeng = poeng;
 		stier = new ArrayList<Sti>();
 		maal = false;
-		besoekt = 0;
+		besoekt = false;
 		kortesteVeiKmf = Double.MAX_VALUE;
 	}
 
@@ -42,36 +42,28 @@ public class Post implements Comparable<Post> {
 	}
 
 	public void besoek(Ryggsekk ryggsekk, double kmf, double distanse) {
-		Ryggsekk nyRyggsekk = ryggsekk.fyll(getPoeng(), kmf, distanse, this);
-		if (nyRyggsekk.overMaksKmf(kortesteVeiKmf)) {
-			return;
-		}
-		if (maal) {
-			nyRyggsekk.noterRute();
-		} else {
-			besoekt++;
+		if (ryggsekk.kanBesoke(this)) {
+			Ryggsekk nyRyggsekk = ryggsekk.fyll(poeng, kmf, distanse, this);
+			if (nyRyggsekk.overMaksKmf(kortesteVeiKmf)) {
+				return;
+			}
+			if (maal) {
+				nyRyggsekk.noterRute();
+			} else {
+				besoekt = true;
 
-			for (Sti sti : stier) {
-				// ikke gaa tilbake langs stier
-				if (!sti.erBrukt()) {
-					// ikke gaa til post som er bes¿kt (bortsett fra tilbake)
-					if (sti.getMotsatt(this).besoekt == 0) {
-						sti.gaaFra(this, nyRyggsekk);
-
+				for (Sti sti : stier) {
+					// ikke gaa tilbake langs stier
+					if (!sti.erBrukt()) {
+						// ikke gaa til post som er besokt
+						if (!sti.getMotsatt(this).besoekt) {
+							sti.gaaFra(this, nyRyggsekk);
+						}
 					}
 				}
+
+				besoekt = false;
 			}
-
-			besoekt--;
-		}
-	}
-
-
-	private int getPoeng() {
-		if (besoekt > 0) {
-			return 0;
-		} else {
-			return poeng;
 		}
 	}
 
@@ -83,7 +75,7 @@ public class Post implements Comparable<Post> {
 		if (kmf < kortesteVeiKmf) {
 			kortesteVeiKmf = kmf;
 			for (Sti sti : stier) {
-				sti.finnKortesteVeiFkm(this, kmf);
+				sti.finnKortesteVeiKmf(this, kmf);
 			}
 		}
 	}

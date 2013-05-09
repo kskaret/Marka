@@ -102,19 +102,19 @@ public class GraphFactory2 {
 				.sti(sinnerdammen, pershusfjellet, 3.4, 2.05, 1.29)//
 				.sti(sinnerdammen, katnosdammen, 7.5, 1.65, 1.71)//
 				.sti(pershusfjellet, katnosdammen, 10.2, 1.59, 1.95)//
-				//.skalBesoke(sognsvann, skjennungstua, studenterhytta, kobberhaug)//
-				//.skalBesoke(sognsvann, skjennungstua, studenterhytta, kobberhaug, bjornholdt)//
-				//.skalBesoke(sognsvann, skjennungstua, studenterhytta, kobberhaug, bjornholdt, liggeren)//
-				//.skalBesoke(sognsvann, skjennungstua, studenterhytta, kobberhaug, bjornholdt, kikut)//
-				//.skalBesoke(sognsvann, skjennungstua, studenterhytta, kobberhaug, bjornholdt, gorja)//
-				//.skalBesoke(sognsvann, skjennungstua, studenterhytta, kobberhaug, kikut)//						
-				//.skalBesoke(sognsvann, skjennungstua, studenterhytta, kobberhaug, kikut, gorja)//
-				//.skalBesoke(sognsvann, skjennungstua, studenterhytta, kobberhaug, kikut, oppkuven)//
-				//.skalBesoke(sognsvann, skjennungstua, studenterhytta, kobberhaug, kikut, smedmyrkoia)//
-				//.skalBesoke(sognsvann, skjennungstua, studenterhytta, kobberhaug, smedmyrkoia, oppkuven, kikut, gorja)//
-				//.skalBesoke(sognsvann, skjennungstua, studenterhytta, kobberhaug, smedmyrkoia, kikut)//
-				//.skalBesoke(sognsvann, skjennungstua, studenterhytta, kobberhaug, smedmyrkoia, oppkuven)//
-				//.skalBesoke(sognsvann, skjennungstua, studenterhytta, kobberhaug, smedmyrkoia, myrseter)//
+				//.skalBesoke(skjennungstua, studenterhytta, kobberhaug)//
+				//.skalBesoke(skjennungstua, studenterhytta, kobberhaug, bjornholdt)//
+				//.skalBesoke(skjennungstua, studenterhytta, kobberhaug, bjornholdt, liggeren)//
+				//.skalBesoke(skjennungstua, studenterhytta, kobberhaug, bjornholdt, kikut)//
+				//.skalBesoke(skjennungstua, studenterhytta, kobberhaug, bjornholdt, gorja)//
+				//.skalBesoke(skjennungstua, studenterhytta, kobberhaug, kikut)//						
+				//.skalBesoke(skjennungstua, studenterhytta, kobberhaug, kikut, gorja)//
+				//.skalBesoke(skjennungstua, studenterhytta, kobberhaug, kikut, oppkuven)//
+				//.skalBesoke(skjennungstua, studenterhytta, kobberhaug, kikut, smedmyrkoia)//
+				//.skalBesoke(skjennungstua, studenterhytta, kobberhaug, smedmyrkoia, oppkuven, kikut, gorja)//
+				//.skalBesoke(skjennungstua, studenterhytta, kobberhaug, smedmyrkoia, kikut)//
+				//.skalBesoke(skjennungstua, studenterhytta, kobberhaug, smedmyrkoia, oppkuven)//
+				//.skalBesoke(skjennungstua, studenterhytta, kobberhaug, smedmyrkoia, myrseter)//
 				.build();
 	}
 

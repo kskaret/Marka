@@ -20,15 +20,15 @@ public class Sti {
 		this.abFaktor = abFaktor;
 		this.baFaktor = baFaktor;
 		this.brukt = false;
-		
+
 		fra.leggTilSti(this);
 		til.leggTilSti(this);
 	}
 
 	public String toString() {
 		// a -- b [len=1, label=1];
-		return postA + " -- " + postB + " [len=" + lengde  + ", label="
-				+ lengde + "]\n";
+		return postA + " -- " + postB + " [len=" + lengde + ", label=" + lengde
+				+ "]\n";
 	}
 
 	public boolean erBrukt() {
@@ -36,23 +36,29 @@ public class Sti {
 	}
 
 	public void gaaFra(Post fra, Ryggsekk ryggsekk) {
-		if (ryggsekk.kanBesoke(fra)) {
-		 brukt=true;
-			if (postA.equals(fra)) {
-				postB.besoek(ryggsekk, lengde * abFaktor, lengde);
-			} else if (postB.equals(fra)) {
-				postA.besoek(ryggsekk, lengde * baFaktor, lengde);
-			}
-			brukt=false;
+		brukt = true;
+		if (postA.equals(fra)) {
+			postB.besoek(ryggsekk, abKmf(), lengde);
+		} else if (postB.equals(fra)) {
+			postA.besoek(ryggsekk, baKmf(), lengde);
+		}
+		brukt = false;
+	}
+
+	public void finnKortesteVeiKmf(Post fra, double kmf) {
+		if (postA.equals(fra)) {
+			postB.finnKorteteVeiKmf(kmf + abKmf());
+		} else {
+			postA.finnKorteteVeiKmf(kmf + baKmf());
 		}
 	}
 
-	public void finnKortesteVeiFkm(Post fra, double fkm) {
-		if (postA.equals(fra)) {
-			postB.finnKorteteVeiKmf(fkm + lengde * abFaktor);
-		} else {
-			postA.finnKorteteVeiKmf(fkm + lengde * baFaktor);
-		}
+	private double abKmf() {
+		return lengde * abFaktor;
+	}
+
+	private double baKmf() {
+		return lengde * baFaktor;
 	}
 
 	public Post getPostA() {
