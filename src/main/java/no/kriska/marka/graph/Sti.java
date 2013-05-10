@@ -4,10 +4,10 @@ import no.kriska.marka.Ryggsekk;
 
 public class Sti {
 
-	private Post fra;
-	private Post til;
-	private double lengde;
-	private double faktor;
+	private final Post til;
+	private final Post fra;
+	private final double lengde;
+	private final double faktor;
 	private boolean brukt;
 
 	public Sti(Post fra, Post til, double lengde, double abFaktor) {
@@ -38,10 +38,6 @@ public class Sti {
 
 	public void finnKortesteVeiKmf(double kmf) {
 		til.finnKorteteVeiKmf(kmf + lengde * faktor);
-	}
-
-	public Post getFra() {
-		return fra;
 	}
 
 	public Post getTil() {

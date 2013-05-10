@@ -9,9 +9,9 @@ import no.kriska.marka.Ryggsekk;
 
 public class Post implements Comparable<Post> {
 
-	private String navn;
-	private int poeng;
-	private List<Sti> stier;
+	private final String navn;
+	private final int poeng;
+	private final List<Sti> stier;
 	private boolean maal;
 	private boolean besoekt;
 	private double kortesteVeiKmf;
