@@ -11,12 +11,9 @@ public class Graph {
 
 	List<Sti> stier;
 
-	List<Post> skalBesoke;
-
 	public Graph(Post start) {
 		this.start = start;
 		stier = new ArrayList<Sti>();
-		this.skalBesoke = new ArrayList<Post>();
 	}
 
 	public String toString() {
@@ -41,18 +38,9 @@ public class Graph {
 	public Set<Post> poster() {
 		Set<Post> poster = new HashSet<Post>();
 		for (Sti sti : stier) {
-			//poster.add(sti.getFra());
+			// poster.add(sti.getFra());
 			poster.add(sti.getTil());
 		}
 		return poster;
 	}
-
-	public void setSkalBesoke(List<Post> skalBesoke) {
-		this.skalBesoke = skalBesoke;
-	}
-
-	public List<Post> getSkalBesoke() {
-		return skalBesoke;
-	}
-
 }

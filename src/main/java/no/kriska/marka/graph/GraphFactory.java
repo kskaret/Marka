@@ -45,7 +45,7 @@ public class GraphFactory {
 		return new GraphBuilder() //
 				.start(sognsvann) //
 				.sti(sognsvann, ullevalseter, 5.15, 1.75, 0.86) //
-				//.sti(sognsvann, saeteren, 13.35, 1.20, 1.26) //
+				// .sti(sognsvann, saeteren, 13.35, 1.20, 1.26) //
 				.sti(sognsvann, skjennungstua, 4.9, 2.51, 0.79) //
 				.sti(ullevalseter, skjennungstua, 2.2, 2.44, 0.68) //
 				.sti(ullevalseter, fagervann, 3.85, 2.39, 1.61) //
@@ -102,19 +102,6 @@ public class GraphFactory {
 				.sti(sinnerdammen, pershusfjellet, 3.4, 2.05, 1.29)//
 				.sti(sinnerdammen, katnosdammen, 7.5, 1.65, 1.71)//
 				.sti(pershusfjellet, katnosdammen, 10.2, 1.59, 1.95)//
-				//.skalBesoke(skjennungstua, studenterhytta, kobberhaug)//
-				//.skalBesoke(skjennungstua, studenterhytta, kobberhaug, bjornholdt)//
-				//.skalBesoke(skjennungstua, studenterhytta, kobberhaug, bjornholdt, liggeren)//
-				//.skalBesoke(skjennungstua, studenterhytta, kobberhaug, bjornholdt, kikut)//
-				//.skalBesoke(skjennungstua, studenterhytta, kobberhaug, bjornholdt, gorja)//
-				//.skalBesoke(skjennungstua, studenterhytta, kobberhaug, kikut)//						
-				//.skalBesoke(skjennungstua, studenterhytta, kobberhaug, kikut, gorja)//
-				//.skalBesoke(skjennungstua, studenterhytta, kobberhaug, kikut, oppkuven)//
-				//.skalBesoke(skjennungstua, studenterhytta, kobberhaug, kikut, smedmyrkoia)//
-				//.skalBesoke(skjennungstua, studenterhytta, kobberhaug, smedmyrkoia, oppkuven, kikut, gorja)//
-				//.skalBesoke(skjennungstua, studenterhytta, kobberhaug, smedmyrkoia, kikut)//
-				//.skalBesoke(skjennungstua, studenterhytta, kobberhaug, smedmyrkoia, oppkuven)//
-				//.skalBesoke(skjennungstua, studenterhytta, kobberhaug, smedmyrkoia, myrseter)//
 				.build();
 	}
 

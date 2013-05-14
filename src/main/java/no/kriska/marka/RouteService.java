@@ -1,7 +1,9 @@
 package no.kriska.marka;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 
 import no.kriska.marka.graph.Graph;
 import no.kriska.marka.graph.Post;
@@ -11,6 +13,11 @@ import no.kriska.marka.graph.Sti;
 public class RouteService {
 
 	public Collection<Rute> optimalRoute(Graph graph, double maksKmf) {
+		return optimalRoute(graph, maksKmf, new ArrayList<Post>());
+	}
+
+	public Collection<Rute> optimalRoute(Graph graph, double maksKmf,
+			List<Post> skalBesoke) {
 		Date startTid = new Date();
 
 		Post start = graph.getStart();
@@ -18,7 +25,7 @@ public class RouteService {
 		// beregn korteste vei hjem for alle noder
 		start.finnKorteteVeiKmf(0);
 
-		Ryggsekk ryggsekk = new Ryggsekk(start, maksKmf, graph.getSkalBesoke());
+		Ryggsekk ryggsekk = new Ryggsekk(start, maksKmf, skalBesoke);
 
 		for (Sti sti : start.stier()) {
 			sti.gaa(ryggsekk);
