@@ -2,31 +2,31 @@ package no.kriska.marka.graph;
 
 public class GraphFactory {
 
-	public static final Post SOGNSVANN = new Post("sognsvann", 0);
-	public static final Post ULLEVALSETER = new Post("ullevalseter", 21);
-	public static final Post SKJENNUNGSTUA = new Post("skjennungstua", 23);
-	public static final Post MELLOMKOLLEN = new Post("mellomkollen", 28);
-	public static final Post LIGGEREN = new Post("liggeren", 31);
-	public static final  Post FAGERVANN = new Post("fagervann", 33);
-	public static final  Post STUDENTERHYTTA = new Post("studenterhytta", 35);
-	public static final  Post BJORNHOLDT = new Post("bjornholdt", 45);
-	public static final  Post KIKUT = new Post("kikut", 75);
-	public static final  Post GORJA = new Post("gorja", 65);
-	public static final  Post KOBBERHAUG = new Post("kobberhaug", 80);
-	public static final  Post TOMTE = new Post("tomte", 80);
-	public static final  Post BRUNKOLLEN = new Post("brunkollen", 34);
-	public static final  Post SMEDMYRKOIA = new Post("smedmyrkoia", 83);
-	public static final  Post SAETEREN = new Post("saeteren", 66);
-	public static final  Post VENAS = new Post("venas", 59);
-	public static final  Post MUSTADKROKEN = new Post("mustadkroken", 190);
-	public static final  Post MYRSETER = new Post("myrseter", 138);
-	public static final  Post OPPKUVEN = new Post("oppkuven", 151);
-	public static final  Post PRESTHYTTA = new Post("presthytta", 131);
-	public static final  Post GYRIHAUG = new Post("gyrihaug", 201);
-	public static final  Post JORGENHYTTA = new Post("jorgenhytta", 176);
-	public static final  Post SINNERDAMMEN = new Post("sinnerdammen", 169);
-	public static final  Post PERSHUSFJELLET = new Post("pershusfjellet", 182);
-	public static final  Post KATNOSDAMMEN = new Post("katnosdammen", 131);
+	public final Post SOGNSVANN = new Post("sognsvann", 0);
+	public final Post ULLEVALSETER = new Post("ullevalseter", 21);
+	public final Post SKJENNUNGSTUA = new Post("skjennungstua", 23);
+	public final Post MELLOMKOLLEN = new Post("mellomkollen", 28);
+	public final Post LIGGEREN = new Post("liggeren", 31);
+	public final Post FAGERVANN = new Post("fagervann", 33);
+	public final Post STUDENTERHYTTA = new Post("studenterhytta", 35);
+	public final Post BJORNHOLDT = new Post("bjornholdt", 45);
+	public final Post KIKUT = new Post("kikut", 75);
+	public final Post GORJA = new Post("gorja", 65);
+	public final Post KOBBERHAUG = new Post("kobberhaug", 80);
+	public final Post TOMTE = new Post("tomte", 80);
+	public final Post BRUNKOLLEN = new Post("brunkollen", 34);
+	public final Post SMEDMYRKOIA = new Post("smedmyrkoia", 83);
+	public final Post SAETEREN = new Post("saeteren", 66);
+	public final Post VENAS = new Post("venas", 59);
+	public final Post MUSTADKROKEN = new Post("mustadkroken", 190);
+	public final Post MYRSETER = new Post("myrseter", 138);
+	public final Post OPPKUVEN = new Post("oppkuven", 151);
+	public final Post PRESTHYTTA = new Post("presthytta", 131);
+	public final Post GYRIHAUG = new Post("gyrihaug", 201);
+	public final Post JORGENHYTTA = new Post("jorgenhytta", 176);
+	public final Post SINNERDAMMEN = new Post("sinnerdammen", 169);
+	public final Post PERSHUSFJELLET = new Post("pershusfjellet", 182);
+	public final Post KATNOSDAMMEN = new Post("katnosdammen", 131);
 
 	public Graph miniGraph() {
 		return new GraphBuilder() //
@@ -45,7 +45,7 @@ public class GraphFactory {
 		return new GraphBuilder() //
 				.start(SOGNSVANN) //
 				.sti(SOGNSVANN, ULLEVALSETER, 5.15, 1.75, 0.86) //
-				// .sti(sognsvann, saeteren, 13.35, 1.20, 1.26) //
+				.sti(SOGNSVANN, SAETEREN, 13.35, 1.20, 1.26) //
 				.sti(SOGNSVANN, SKJENNUNGSTUA, 4.9, 2.51, 0.79) //
 				.sti(ULLEVALSETER, SKJENNUNGSTUA, 2.2, 2.44, 0.68) //
 				.sti(ULLEVALSETER, FAGERVANN, 3.85, 2.39, 1.61) //

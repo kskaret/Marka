@@ -1,8 +1,5 @@
 package no.kriska.marka;
 
-import static no.kriska.marka.graph.GraphFactory.SKJENNUNGSTUA;
-import static no.kriska.marka.graph.GraphFactory.STUDENTERHYTTA;
-
 import java.util.Arrays;
 import java.util.List;
 
@@ -16,9 +13,9 @@ public class Marka24 {
 
 		RouteService routeService = new RouteService();
 
-		List<Post> skalBesoke = Arrays.asList(SKJENNUNGSTUA, STUDENTERHYTTA);
-		routeService.optimalRoute(graph, 275, skalBesoke);
-		// routeService.optimalRoute(graph, 275);
+		// List<Post> skalBesoke = Arrays.asList(SKJENNUNGSTUA, STUDENTERHYTTA);
+		// routeService.optimalRoute(graph, 275, skalBesoke);
+		routeService.optimalRoute(graph, 275);
 	}
 }
 
