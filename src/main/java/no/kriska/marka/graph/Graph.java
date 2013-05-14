@@ -1,19 +1,18 @@
 package no.kriska.marka.graph;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
 public class Graph {
 
-	Post start;
+	private final Post start;
 
-	List<Sti> stier;
+	private final List<Sti> stier;
 
-	public Graph(Post start) {
+	public Graph(Post start, List<Sti> stier) {
 		this.start = start;
-		stier = new ArrayList<Sti>();
+		this.stier = stier;
 	}
 
 	public String toString() {
@@ -25,10 +24,6 @@ public class Graph {
 		sb.append("}");
 
 		return sb.toString();
-	}
-
-	public void leggTilSti(Sti sti) {
-		stier.add(sti);
 	}
 
 	public Post getStart() {
