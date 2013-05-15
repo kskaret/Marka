@@ -5,7 +5,7 @@ import java.util.List;
 
 import no.kriska.marka.graph.Graph;
 import no.kriska.marka.graph.GraphFactory;
-import no.kriska.marka.graph.Post;
+import no.kriska.marka.graph.Kryss;
 
 public class Marka24 {
 	public static void main(String[] args) {

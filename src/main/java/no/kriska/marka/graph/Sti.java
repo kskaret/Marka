@@ -4,13 +4,13 @@ import no.kriska.marka.Ryggsekk;
 
 public class Sti {
 
-	private final Post til;
-	private final Post fra;
+	private final Kryss til;
+	private final Kryss fra;
 	private final double lengde;
 	private final double faktor;
 	private boolean brukt;
 
-	public Sti(Post fra, Post til, double lengde, double abFaktor) {
+	public Sti(Kryss fra, Kryss til, double lengde, double abFaktor) {
 		this.fra = fra;
 		this.til = til;
 		this.lengde = lengde;
@@ -40,7 +40,7 @@ public class Sti {
 		til.finnKorteteVeiKmf(kmf + lengde * faktor);
 	}
 
-	public Post getTil() {
+	public Kryss getTil() {
 		return til;
 	}
 

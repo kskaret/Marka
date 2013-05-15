@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 
-import no.kriska.marka.graph.Post;
+import no.kriska.marka.graph.Kryss;
 import no.kriska.marka.graph.Rute;
 import no.kriska.marka.graph.Rutenotater;
 
@@ -13,13 +13,13 @@ public class Ryggsekk {
 	private int poeng;
 	private double kmf;
 	private double distanse;
-	private Post post;
+	private Kryss post;
 	private Ryggsekk forrigeRyggsekk = null;
 	private Rutenotater ruteNotater;
 	private double makskmf;
-	private List<Post> skalBesoke;
+	private List<Kryss> skalBesoke;
 
-	public Ryggsekk(Post post, double maksKmf, List<Post> skalBesoke) {
+	public Ryggsekk(Kryss post, double maksKmf, List<Kryss> skalBesoke) {
 		this.poeng = 0;
 		this.kmf = 0;
 		this.distanse = 0;
@@ -30,8 +30,8 @@ public class Ryggsekk {
 	}
 
 	private Ryggsekk(int poeng, double kmf, double distanse,
-			Rutenotater ruteNotater, Post post, Ryggsekk forrigeRyggsekk,
-			List<Post> skalBesoke) {
+			Rutenotater ruteNotater, Kryss post, Ryggsekk forrigeRyggsekk,
+			List<Kryss> skalBesoke) {
 		this.poeng = poeng;
 		this.kmf = kmf;
 		this.distanse = distanse;
@@ -71,13 +71,13 @@ public class Ryggsekk {
 		return ruteNotater.ruter();
 	}
 
-	public Ryggsekk fyll(int p, double dKmf, double dDistanse, Post post) {
+	public Ryggsekk fyll(int p, double dKmf, double dDistanse, Kryss post) {
 		return new Ryggsekk(poeng + p, sum(kmf, dKmf),
 				sum(distanse, dDistanse), ruteNotater, post, this, nyAaBesoke());
 	}
 
-	private List<Post> nyAaBesoke() {
-		LinkedList<Post> nyAaBesoke = new LinkedList<Post>(skalBesoke);
+	private List<Kryss> nyAaBesoke() {
+		LinkedList<Kryss> nyAaBesoke = new LinkedList<Kryss>(skalBesoke);
 		if (!nyAaBesoke.isEmpty()) {
 			nyAaBesoke.remove(0);
 		}
@@ -92,11 +92,11 @@ public class Ryggsekk {
 		return kmf + kortesteVeiHjem > makskmf;
 	}
 
-	public boolean kanBesoke(Post fra) {
+	public boolean kanBesoke(Kryss fra) {
 		if (skalBesoke.isEmpty()) {
 			return true;
 		} else {
-			Post post = skalBesoke.get(0);
+			Kryss post = skalBesoke.get(0);
 			return (fra.equals(post));
 		}
 	}

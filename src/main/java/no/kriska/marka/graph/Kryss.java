@@ -7,7 +7,7 @@ import java.util.List;
 
 import no.kriska.marka.Ryggsekk;
 
-public class Post implements Comparable<Post> {
+public class Kryss implements Comparable<Kryss> {
 
 	private final String navn;
 	private final int poeng;
@@ -16,7 +16,7 @@ public class Post implements Comparable<Post> {
 	private boolean besoekt;
 	private double kortesteVeiKmf;
 
-	public Post(String navn, int poeng) {
+	public Kryss(String navn, int poeng) {
 		this.navn = navn;
 		this.poeng = poeng;
 		stier = new ArrayList<Sti>();
@@ -64,7 +64,7 @@ public class Post implements Comparable<Post> {
 		}
 	}
 
-	public boolean equals(Post annen) {
+	public boolean equals(Kryss annen) {
 		return navn.equals(annen.toString());
 	}
 
@@ -82,7 +82,7 @@ public class Post implements Comparable<Post> {
 	}
 
 	@Override
-	public int compareTo(Post o) {
+	public int compareTo(Kryss o) {
 		return navn.compareTo(o.navn);
 	}
 }

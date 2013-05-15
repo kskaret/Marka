@@ -4,7 +4,7 @@ import java.util.Set;
 
 import no.kriska.marka.graph.Graph;
 import no.kriska.marka.graph.GraphFactory;
-import no.kriska.marka.graph.Post;
+import no.kriska.marka.graph.Kryss;
 
 import org.junit.Test;
 
@@ -14,8 +14,8 @@ public class KortesteVeiTest {
 	public void skalFinneShortestPathHomeIMiniGraph() {
 		Graph graph = new GraphFactory().miniGraph();
 
-		Set<Post> poster = shortestPathsHome(graph);
-		for (Post post : poster) {
+		Set<Kryss> poster = shortestPathsHome(graph);
+		for (Kryss post : poster) {
 			System.out.println(post.getKortesteVeiKmf() + " " + post);
 		}
 	}
@@ -25,14 +25,14 @@ public class KortesteVeiTest {
 	public void skalFinneShortestPathHomeIFullGraph() {
 		Graph graph = new GraphFactory().fullGraph();
 
-		Set<Post> poster = shortestPathsHome(graph);
-		for (Post post : poster) {
+		Set<Kryss> poster = shortestPathsHome(graph);
+		for (Kryss post : poster) {
 			System.out.println(post.getKortesteVeiKmf() + " " + post);
 		}
 	}
 	
-	private Set<Post> shortestPathsHome(Graph graph) {
-		Post start = graph.getStart();
+	private Set<Kryss> shortestPathsHome(Graph graph) {
+		Kryss start = graph.getStart();
 		start.finnKorteteVeiKmf(0);
 
 		return graph.poster();

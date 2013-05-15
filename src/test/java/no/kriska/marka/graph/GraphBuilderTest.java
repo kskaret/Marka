@@ -4,7 +4,7 @@ import junit.framework.Assert;
 
 import no.kriska.marka.graph.Graph;
 import no.kriska.marka.graph.GraphBuilder;
-import no.kriska.marka.graph.Post;
+import no.kriska.marka.graph.Kryss;
 
 import org.junit.Test;
 
@@ -12,9 +12,9 @@ public class GraphBuilderTest {
 
 	@Test
 	public void skalByggeGraph() {
-		Post sognsvann = new Post("sognsvann", 1);
-		Post ullevalseter = new Post("ullevalseter", 1);
-		Post fagervann = new Post("fagervann", 1);
+		Kryss sognsvann = new Kryss("sognsvann", 1);
+		Kryss ullevalseter = new Kryss("ullevalseter", 1);
+		Kryss fagervann = new Kryss("fagervann", 1);
 
 		Graph graph = new GraphBuilder() //
 				.start(sognsvann) //

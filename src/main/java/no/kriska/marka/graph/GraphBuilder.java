@@ -5,11 +5,11 @@ import java.util.List;
 
 public class GraphBuilder {
 
-	private Post start;
+	private Kryss start;
 
 	private List<Sti> stier = new ArrayList<Sti>();
 
-	public GraphBuilder start(Post start) {
+	public GraphBuilder start(Kryss start) {
 		start.setMaal();
 		this.start = start;
 		return this;
@@ -19,7 +19,7 @@ public class GraphBuilder {
 		return new Graph(start, stier);
 	}
 
-	public GraphBuilder sti(Post postA, Post postB, double lengde,
+	public GraphBuilder sti(Kryss postA, Kryss postB, double lengde,
 			double abFaktor, double baFaktor) {
 
 		stier.add(new Sti(postA, postB, lengde, abFaktor));

@@ -6,11 +6,11 @@ import java.util.Set;
 
 public class Graph {
 
-	private final Post start;
+	private final Kryss start;
 
 	private final List<Sti> stier;
 
-	public Graph(Post start, List<Sti> stier) {
+	public Graph(Kryss start, List<Sti> stier) {
 		this.start = start;
 		this.stier = stier;
 	}
@@ -26,12 +26,12 @@ public class Graph {
 		return sb.toString();
 	}
 
-	public Post getStart() {
+	public Kryss getStart() {
 		return start;
 	}
 
-	public Set<Post> poster() {
-		Set<Post> poster = new HashSet<Post>();
+	public Set<Kryss> poster() {
+		Set<Kryss> poster = new HashSet<Kryss>();
 		for (Sti sti : stier) {
 			// poster.add(sti.getFra());
 			poster.add(sti.getTil());

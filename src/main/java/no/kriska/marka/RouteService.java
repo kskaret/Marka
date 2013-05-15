@@ -6,21 +6,21 @@ import java.util.Date;
 import java.util.List;
 
 import no.kriska.marka.graph.Graph;
-import no.kriska.marka.graph.Post;
+import no.kriska.marka.graph.Kryss;
 import no.kriska.marka.graph.Rute;
 import no.kriska.marka.graph.Sti;
 
 public class RouteService {
 
 	public Collection<Rute> optimalRoute(Graph graph, double maksKmf) {
-		return optimalRoute(graph, maksKmf, new ArrayList<Post>());
+		return optimalRoute(graph, maksKmf, new ArrayList<Kryss>());
 	}
 
 	public Collection<Rute> optimalRoute(Graph graph, double maksKmf,
-			List<Post> skalBesoke) {
+			List<Kryss> skalBesoke) {
 		Date startTid = new Date();
 
-		Post start = graph.getStart();
+		Kryss start = graph.getStart();
 
 		// beregn korteste vei hjem for alle noder
 		start.finnKorteteVeiKmf(0);

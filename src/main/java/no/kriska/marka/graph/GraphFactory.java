@@ -2,31 +2,31 @@ package no.kriska.marka.graph;
 
 public class GraphFactory {
 
-	public final Post SOGNSVANN = new Post("sognsvann", 0);
-	public final Post ULLEVALSETER = new Post("ullevalseter", 21);
-	public final Post SKJENNUNGSTUA = new Post("skjennungstua", 23);
-	public final Post MELLOMKOLLEN = new Post("mellomkollen", 28);
-	public final Post LIGGEREN = new Post("liggeren", 31);
-	public final Post FAGERVANN = new Post("fagervann", 33);
-	public final Post STUDENTERHYTTA = new Post("studenterhytta", 35);
-	public final Post BJORNHOLDT = new Post("bjornholdt", 45);
-	public final Post KIKUT = new Post("kikut", 75);
-	public final Post GORJA = new Post("gorja", 65);
-	public final Post KOBBERHAUG = new Post("kobberhaug", 80);
-	public final Post TOMTE = new Post("tomte", 80);
-	public final Post BRUNKOLLEN = new Post("brunkollen", 34);
-	public final Post SMEDMYRKOIA = new Post("smedmyrkoia", 83);
-	public final Post SAETEREN = new Post("saeteren", 66);
-	public final Post VENAS = new Post("venas", 59);
-	public final Post MUSTADKROKEN = new Post("mustadkroken", 190);
-	public final Post MYRSETER = new Post("myrseter", 138);
-	public final Post OPPKUVEN = new Post("oppkuven", 151);
-	public final Post PRESTHYTTA = new Post("presthytta", 131);
-	public final Post GYRIHAUG = new Post("gyrihaug", 201);
-	public final Post JORGENHYTTA = new Post("jorgenhytta", 176);
-	public final Post SINNERDAMMEN = new Post("sinnerdammen", 169);
-	public final Post PERSHUSFJELLET = new Post("pershusfjellet", 182);
-	public final Post KATNOSDAMMEN = new Post("katnosdammen", 131);
+	public final Kryss SOGNSVANN = new Kryss("sognsvann", 0);
+	public final Kryss ULLEVALSETER = new Kryss("ullevalseter", 21);
+	public final Kryss SKJENNUNGSTUA = new Kryss("skjennungstua", 23);
+	public final Kryss MELLOMKOLLEN = new Kryss("mellomkollen", 28);
+	public final Kryss LIGGEREN = new Kryss("liggeren", 31);
+	public final Kryss FAGERVANN = new Kryss("fagervann", 33);
+	public final Kryss STUDENTERHYTTA = new Kryss("studenterhytta", 35);
+	public final Kryss BJORNHOLDT = new Kryss("bjornholdt", 45);
+	public final Kryss KIKUT = new Kryss("kikut", 75);
+	public final Kryss GORJA = new Kryss("gorja", 65);
+	public final Kryss KOBBERHAUG = new Kryss("kobberhaug", 80);
+	public final Kryss TOMTE = new Kryss("tomte", 80);
+	public final Kryss BRUNKOLLEN = new Kryss("brunkollen", 34);
+	public final Kryss SMEDMYRKOIA = new Kryss("smedmyrkoia", 83);
+	public final Kryss SAETEREN = new Kryss("saeteren", 66);
+	public final Kryss VENAS = new Kryss("venas", 59);
+	public final Kryss MUSTADKROKEN = new Kryss("mustadkroken", 190);
+	public final Kryss MYRSETER = new Kryss("myrseter", 138);
+	public final Kryss OPPKUVEN = new Kryss("oppkuven", 151);
+	public final Kryss PRESTHYTTA = new Kryss("presthytta", 131);
+	public final Kryss GYRIHAUG = new Kryss("gyrihaug", 201);
+	public final Kryss JORGENHYTTA = new Kryss("jorgenhytta", 176);
+	public final Kryss SINNERDAMMEN = new Kryss("sinnerdammen", 169);
+	public final Kryss PERSHUSFJELLET = new Kryss("pershusfjellet", 182);
+	public final Kryss KATNOSDAMMEN = new Kryss("katnosdammen", 131);
 
 	public Graph miniGraph() {
 		return new GraphBuilder() //
