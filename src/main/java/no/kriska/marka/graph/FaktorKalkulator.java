@@ -41,6 +41,16 @@ public class FaktorKalkulator {
 		return avrund(turFaktor);
 	}
 
+	public static double snittFaktor(double distanse, double stigning,
+			double nedtur, int veiProsent) {
+
+		double krisFaktor = krisFaktor(distanse, stigning, nedtur, veiProsent);
+		double larsFaktor = larsFaktor(distanse, stigning, nedtur, veiProsent);
+		double larsNormalisert = larsFaktor / 2.05 * 1.63;
+
+		return avrund((krisFaktor + larsNormalisert) / 2);
+	}
+
 	private static double avrund(double d) {
 		return (Math.round(d * 100.0)) / 100.0;
 	}

@@ -20,13 +20,20 @@ public class FaktorKalkulatorTest {
 
 		assertEquals(1.40, krisFaktor2, 0.0);
 	}
-	
+
 	@Test
 	public void skalBeregneLarsFaktor() {
 		double larsFaktor = FaktorKalkulator.larsFaktor(5.15, 174, 21, 100);
 
 		assertEquals(2.34, larsFaktor, 0.0);
 
+	}
+
+	@Test
+	public void skalBeregneSnittFaktor() {
+		double larsFaktor = FaktorKalkulator.snittFaktor(5.15, 174, 21, 100);
+
+		assertEquals(1.75, larsFaktor, 0.0);
 	}
 
 }
