@@ -5,25 +5,27 @@ import java.util.LinkedList;
 import java.util.List;
 
 import no.kriska.marka.graph.Kryss;
+import no.kriska.marka.graph.Post;
 import no.kriska.marka.graph.Rute;
 import no.kriska.marka.graph.Rutenotater;
 
 public class Ryggsekk {
 
-	private int poeng;
-	private double kmf;
-	private double distanse;
-	private Kryss post;
-	private Ryggsekk forrigeRyggsekk = null;
-	private Rutenotater ruteNotater;
-	private double makskmf;
-	private List<Kryss> skalBesoke;
+	private final int poeng;
+	private final double kmf;
+	private final double distanse;
+	private final Kryss post;
+	private final Ryggsekk forrigeRyggsekk;
+	private final Rutenotater ruteNotater;
+	private final double makskmf;
+	private final List<Post> skalBesoke;
 
-	public Ryggsekk(Kryss post, double maksKmf, List<Kryss> skalBesoke) {
+	public Ryggsekk(Kryss post, double maksKmf, List<Post> skalBesoke) {
 		this.poeng = 0;
 		this.kmf = 0;
 		this.distanse = 0;
 		this.post = post;
+		this.forrigeRyggsekk = null;
 		this.ruteNotater = new Rutenotater();
 		this.makskmf = maksKmf;
 		this.skalBesoke = skalBesoke;
@@ -31,7 +33,7 @@ public class Ryggsekk {
 
 	private Ryggsekk(int poeng, double kmf, double distanse,
 			Rutenotater ruteNotater, Kryss post, Ryggsekk forrigeRyggsekk,
-			List<Kryss> skalBesoke) {
+			List<Post> skalBesoke) {
 		this.poeng = poeng;
 		this.kmf = kmf;
 		this.distanse = distanse;
@@ -76,8 +78,8 @@ public class Ryggsekk {
 				sum(distanse, dDistanse), ruteNotater, post, this, nyAaBesoke());
 	}
 
-	private List<Kryss> nyAaBesoke() {
-		LinkedList<Kryss> nyAaBesoke = new LinkedList<Kryss>(skalBesoke);
+	private List<Post> nyAaBesoke() {
+		LinkedList<Post> nyAaBesoke = new LinkedList<Post>(skalBesoke);
 		if (!nyAaBesoke.isEmpty()) {
 			nyAaBesoke.remove(0);
 		}
@@ -96,8 +98,8 @@ public class Ryggsekk {
 		if (skalBesoke.isEmpty()) {
 			return true;
 		} else {
-			Kryss post = skalBesoke.get(0);
-			return (fra.equals(post));
+			Post post = skalBesoke.get(0);
+			return (fra.getPost().equals(post));
 		}
 	}
 

@@ -7,17 +7,18 @@ import java.util.List;
 
 import no.kriska.marka.graph.Graph;
 import no.kriska.marka.graph.Kryss;
+import no.kriska.marka.graph.Post;
 import no.kriska.marka.graph.Rute;
 import no.kriska.marka.graph.Sti;
 
 public class RouteService {
 
 	public Collection<Rute> optimalRoute(Graph graph, double maksKmf) {
-		return optimalRoute(graph, maksKmf, new ArrayList<Kryss>());
+		return optimalRoute(graph, maksKmf, new ArrayList<Post>());
 	}
 
 	public Collection<Rute> optimalRoute(Graph graph, double maksKmf,
-			List<Kryss> skalBesoke) {
+			List<Post> skalBesoke) {
 		Date startTid = new Date();
 
 		Kryss start = graph.getStart();
