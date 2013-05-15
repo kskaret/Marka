@@ -1,10 +1,9 @@
 package no.kriska.marka.graph;
 
+import static no.kriska.marka.graph.Post.FAGERVANN;
+import static no.kriska.marka.graph.Post.SOGNSVANN;
+import static no.kriska.marka.graph.Post.ULLEVALSETER;
 import junit.framework.Assert;
-
-import no.kriska.marka.graph.Graph;
-import no.kriska.marka.graph.GraphBuilder;
-import no.kriska.marka.graph.Kryss;
 
 import org.junit.Test;
 
@@ -12,15 +11,11 @@ public class GraphBuilderTest {
 
 	@Test
 	public void skalByggeGraph() {
-		Kryss sognsvann = new Kryss("sognsvann", 1);
-		Kryss ullevalseter = new Kryss("ullevalseter", 1);
-		Kryss fagervann = new Kryss("fagervann", 1);
-
 		Graph graph = new GraphBuilder() //
-				.start(sognsvann) //
-				.sti(sognsvann, ullevalseter, 5.3, 1.0, 1.0) //
-				.sti(ullevalseter, fagervann, 3.9, 1.0, 1.0) //
-				.sti(fagervann, sognsvann, 8.2, 1.0, 1.0) //
+				.start(SOGNSVANN) //
+				.sti(SOGNSVANN, ULLEVALSETER, 5.3, 1.0, 1.0) //
+				.sti(ULLEVALSETER, FAGERVANN, 3.9, 1.0, 1.0) //
+				.sti(FAGERVANN, SOGNSVANN, 8.2, 1.0, 1.0) //
 				.build();
 		System.out.println(graph);
 

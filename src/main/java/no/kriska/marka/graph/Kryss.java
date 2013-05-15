@@ -9,16 +9,14 @@ import no.kriska.marka.Ryggsekk;
 
 public class Kryss implements Comparable<Kryss> {
 
-	private final String navn;
-	private final int poeng;
+	private final Post post;
 	private final List<Sti> stier;
 	private boolean maal;
 	private boolean besoekt;
 	private double kortesteVeiKmf;
 
-	public Kryss(String navn, int poeng) {
-		this.navn = navn;
-		this.poeng = poeng;
+	public Kryss(Post post) {
+		this.post = post;
 		stier = new ArrayList<Sti>();
 		maal = false;
 		besoekt = false;
@@ -34,7 +32,7 @@ public class Kryss implements Comparable<Kryss> {
 	}
 
 	public String toString() {
-		return navn;
+		return post.getNavn();
 	}
 
 	public List<Sti> stier() {
@@ -43,7 +41,8 @@ public class Kryss implements Comparable<Kryss> {
 
 	public void besoek(Ryggsekk ryggsekk, double kmf, double distanse) {
 		if (ryggsekk.kanBesoke(this)) {
-			Ryggsekk nyRyggsekk = ryggsekk.fyll(poeng, kmf, distanse, this);
+			Ryggsekk nyRyggsekk = ryggsekk.fyll(post.getPoeng(), kmf, distanse,
+					this);
 			if (nyRyggsekk.overMaksKmf(kortesteVeiKmf)) {
 				return;
 			}
@@ -65,7 +64,11 @@ public class Kryss implements Comparable<Kryss> {
 	}
 
 	public boolean equals(Kryss annen) {
-		return navn.equals(annen.toString());
+		return post.equals(annen.getPost());
+	}
+
+	public Post getPost() {
+		return post;
 	}
 
 	public void finnKorteteVeiKmf(double kmf) {
@@ -83,6 +86,6 @@ public class Kryss implements Comparable<Kryss> {
 
 	@Override
 	public int compareTo(Kryss o) {
-		return navn.compareTo(o.navn);
+		return post.compareTo(o.getPost());
 	}
 }

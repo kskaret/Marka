@@ -1,32 +1,32 @@
 package no.kriska.marka.graph;
 
-public class GraphFactory {
+import static no.kriska.marka.graph.Post.BJORNHOLDT;
+import static no.kriska.marka.graph.Post.BRUNKOLLEN;
+import static no.kriska.marka.graph.Post.FAGERVANN;
+import static no.kriska.marka.graph.Post.GORJA;
+import static no.kriska.marka.graph.Post.GYRIHAUG;
+import static no.kriska.marka.graph.Post.JORGENHYTTA;
+import static no.kriska.marka.graph.Post.KATNOSDAMMEN;
+import static no.kriska.marka.graph.Post.KIKUT;
+import static no.kriska.marka.graph.Post.KOBBERHAUG;
+import static no.kriska.marka.graph.Post.LIGGEREN;
+import static no.kriska.marka.graph.Post.MELLOMKOLLEN;
+import static no.kriska.marka.graph.Post.MUSTADKROKEN;
+import static no.kriska.marka.graph.Post.MYRSETER;
+import static no.kriska.marka.graph.Post.OPPKUVEN;
+import static no.kriska.marka.graph.Post.PERSHUSFJELLET;
+import static no.kriska.marka.graph.Post.PRESTHYTTA;
+import static no.kriska.marka.graph.Post.SAETEREN;
+import static no.kriska.marka.graph.Post.SINNERDAMMEN;
+import static no.kriska.marka.graph.Post.SKJENNUNGSTUA;
+import static no.kriska.marka.graph.Post.SMEDMYRKOIA;
+import static no.kriska.marka.graph.Post.SOGNSVANN;
+import static no.kriska.marka.graph.Post.STUDENTERHYTTA;
+import static no.kriska.marka.graph.Post.TOMTE;
+import static no.kriska.marka.graph.Post.ULLEVALSETER;
+import static no.kriska.marka.graph.Post.VENAS;
 
-	public final Kryss SOGNSVANN = new Kryss("sognsvann", 0);
-	public final Kryss ULLEVALSETER = new Kryss("ullevalseter", 21);
-	public final Kryss SKJENNUNGSTUA = new Kryss("skjennungstua", 23);
-	public final Kryss MELLOMKOLLEN = new Kryss("mellomkollen", 28);
-	public final Kryss LIGGEREN = new Kryss("liggeren", 31);
-	public final Kryss FAGERVANN = new Kryss("fagervann", 33);
-	public final Kryss STUDENTERHYTTA = new Kryss("studenterhytta", 35);
-	public final Kryss BJORNHOLDT = new Kryss("bjornholdt", 45);
-	public final Kryss KIKUT = new Kryss("kikut", 75);
-	public final Kryss GORJA = new Kryss("gorja", 65);
-	public final Kryss KOBBERHAUG = new Kryss("kobberhaug", 80);
-	public final Kryss TOMTE = new Kryss("tomte", 80);
-	public final Kryss BRUNKOLLEN = new Kryss("brunkollen", 34);
-	public final Kryss SMEDMYRKOIA = new Kryss("smedmyrkoia", 83);
-	public final Kryss SAETEREN = new Kryss("saeteren", 66);
-	public final Kryss VENAS = new Kryss("venas", 59);
-	public final Kryss MUSTADKROKEN = new Kryss("mustadkroken", 190);
-	public final Kryss MYRSETER = new Kryss("myrseter", 138);
-	public final Kryss OPPKUVEN = new Kryss("oppkuven", 151);
-	public final Kryss PRESTHYTTA = new Kryss("presthytta", 131);
-	public final Kryss GYRIHAUG = new Kryss("gyrihaug", 201);
-	public final Kryss JORGENHYTTA = new Kryss("jorgenhytta", 176);
-	public final Kryss SINNERDAMMEN = new Kryss("sinnerdammen", 169);
-	public final Kryss PERSHUSFJELLET = new Kryss("pershusfjellet", 182);
-	public final Kryss KATNOSDAMMEN = new Kryss("katnosdammen", 131);
+public class GraphFactory {
 
 	public Graph miniGraph() {
 		return new GraphBuilder() //
