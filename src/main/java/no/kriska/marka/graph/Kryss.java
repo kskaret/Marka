@@ -11,20 +11,20 @@ public class Kryss implements Comparable<Kryss> {
 
 	private final Post post;
 	private final List<Sti> stier;
-	private boolean maal;
+	private final boolean maal;
 	private boolean besoekt;
 	private double kortesteVeiKmf;
 
-	public Kryss(Post post) {
+	public Kryss(Post post, boolean erMaal) {
 		this.post = post;
+		this.maal = erMaal;
 		stier = new ArrayList<Sti>();
-		maal = false;
 		besoekt = false;
 		kortesteVeiKmf = Double.MAX_VALUE;
 	}
 
-	public void setMaal() {
-		maal = true;
+	public Kryss(Post post) {
+		this(post, false);
 	}
 
 	public void leggTilSti(Sti sti) {

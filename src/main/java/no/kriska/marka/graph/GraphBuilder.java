@@ -11,11 +11,10 @@ public class GraphBuilder {
 
 	private List<Sti> stier = new ArrayList<Sti>();
 
-	Map<Post, Kryss> alleKryss = new HashMap<Post, Kryss>();
+	private Map<Post, Kryss> alleKryss = new HashMap<Post, Kryss>();
 
 	public GraphBuilder start(Post post) {
-		this.start = new Kryss(post);
-		start.setMaal();
+		this.start = new Kryss(post, true);
 		alleKryss.put(post, start);
 		return this;
 	}
