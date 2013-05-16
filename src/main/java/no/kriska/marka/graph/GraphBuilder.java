@@ -13,6 +13,16 @@ public class GraphBuilder {
 
 	private Map<Post, Kryss> alleKryss = new HashMap<Post, Kryss>();
 
+	private final Faktorkalkulator faktorkalkulator;
+
+	public GraphBuilder() {
+		this.faktorkalkulator = new Faktorkalkulator2012();
+	}
+
+	public GraphBuilder(Faktorkalkulator faktorkalkulator) {
+		this.faktorkalkulator = faktorkalkulator;
+	}
+
 	public GraphBuilder start(Post post) {
 		this.start = new Kryss(post, true);
 		alleKryss.put(post, start);
@@ -36,9 +46,9 @@ public class GraphBuilder {
 
 	public GraphBuilder sti(Post sognsvann, Post ullevalseter, double distanse,
 			int stigning, int nedtur, int andelVei) {
-		double turfaktor = FaktorKalkulator.snittFaktor(distanse, stigning,
-				nedtur, andelVei);
-		double returfaktor = FaktorKalkulator.snittFaktor(distanse, nedtur,
+		double turfaktor = faktorkalkulator.faktor(distanse, stigning, nedtur,
+				andelVei);
+		double returfaktor = faktorkalkulator.faktor(distanse, nedtur,
 				stigning, andelVei);
 
 		return sti(sognsvann, ullevalseter, distanse, turfaktor, returfaktor);

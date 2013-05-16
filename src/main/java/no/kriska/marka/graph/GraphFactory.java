@@ -105,8 +105,8 @@ public class GraphFactory {
 				.build();
 	}
 
-	public Graph fullGraph2() {
-		return new GraphBuilder() //
+	public Graph fullGraph2(Faktorkalkulator faktorkalkulator) {
+		return new GraphBuilder(faktorkalkulator) //
 				.start(SOGNSVANN) //
 				.sti(SOGNSVANN, ULLEVALSETER, 5.15, 174, 21, 100) //
 				.sti(SOGNSVANN, SAETEREN, 13.35, 200, 228, 100) //
