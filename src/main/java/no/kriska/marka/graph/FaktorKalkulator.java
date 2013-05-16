@@ -3,7 +3,7 @@ package no.kriska.marka.graph;
 public class FaktorKalkulator {
 
 	public static double krisFaktor(double distanse, double stigning,
-			double nedtur, int veiProsent) {
+			double nedtur, int andelVei) {
 
 		int oppInnvirkning = 20;
 		int nedInnvirkning = 5;
@@ -15,24 +15,24 @@ public class FaktorKalkulator {
 		double oppFaktor = 1 + oppProsent * oppInnvirkning;
 		double nedFaktor = 1 - nedProsent * nedInnvirkning;
 
-		double stiProsent = (100 - veiProsent) / 100.0;
-		double stifaktor = veiProsent / 100.0 + stiInnvirkning * stiProsent;
+		double andelSti = (100 - andelVei) / 100.0;
+		double stifaktor = andelVei / 100.0 + stiInnvirkning * andelSti;
 
 		double turFaktor = oppFaktor * nedFaktor * stifaktor;
 		return avrund(turFaktor);
 	}
 
 	public static double larsFaktor(double distanse, double stigning,
-			double nedtur, int veiProsent) {
+			double nedtur, int andelVei) {
 
 		double stiInnvirkning = 1.5;
 		double veiInnvirkning = 1.0;
 		double perHoldemeter = 0.04;
 		double perFallmeter = -0.004;
 
-		double stiProsent = 100 - veiProsent;
-		double x = distanse * veiProsent / 100.0 * veiInnvirkning;
-		double y = distanse * stiProsent / 100.0 * stiInnvirkning;
+		double andelSti = 100 - andelVei;
+		double x = distanse * andelVei / 100.0 * veiInnvirkning;
+		double y = distanse * andelSti / 100.0 * stiInnvirkning;
 		double z = stigning * perHoldemeter;
 		double w = nedtur * perFallmeter;
 
@@ -42,10 +42,10 @@ public class FaktorKalkulator {
 	}
 
 	public static double snittFaktor(double distanse, double stigning,
-			double nedtur, int veiProsent) {
+			double nedtur, int andelVei) {
 
-		double krisFaktor = krisFaktor(distanse, stigning, nedtur, veiProsent);
-		double larsFaktor = larsFaktor(distanse, stigning, nedtur, veiProsent);
+		double krisFaktor = krisFaktor(distanse, stigning, nedtur, andelVei);
+		double larsFaktor = larsFaktor(distanse, stigning, nedtur, andelVei);
 		double larsNormalisert = larsFaktor / 2.05 * 1.63;
 
 		return avrund((krisFaktor + larsNormalisert) / 2);

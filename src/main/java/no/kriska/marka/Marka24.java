@@ -12,7 +12,7 @@ import no.kriska.marka.graph.Post;
 
 public class Marka24 {
 	public static void main(String[] args) {
-		Graph graph = new GraphFactory().fullGraph();
+		Graph graph = new GraphFactory().fullGraph2();
 
 		RouteService routeService = new RouteService();
 

@@ -34,6 +34,16 @@ public class GraphBuilder {
 		return this;
 	}
 
+	public GraphBuilder sti(Post sognsvann, Post ullevalseter, double distanse,
+			int stigning, int nedtur, int andelVei) {
+		double turfaktor = FaktorKalkulator.snittFaktor(distanse, stigning,
+				nedtur, andelVei);
+		double returfaktor = FaktorKalkulator.snittFaktor(distanse, nedtur,
+				stigning, andelVei);
+
+		return sti(sognsvann, ullevalseter, distanse, turfaktor, returfaktor);
+	}
+
 	private Kryss putOrGet(Post post) {
 		if (alleKryss.containsKey(post)) {
 			return alleKryss.get(post);
@@ -43,4 +53,5 @@ public class GraphBuilder {
 			return kryss;
 		}
 	}
+
 }
