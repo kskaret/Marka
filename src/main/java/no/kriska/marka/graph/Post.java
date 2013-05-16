@@ -8,25 +8,25 @@ public enum Post {
 	MELLOMKOLLEN("mellomkollen", 28), //
 	LIGGEREN("liggeren", 31), //
 	FAGERVANN("fagervann", 33), //
+	BRUNKOLLEN("brunkollen", 34), //
 	STUDENTERHYTTA("studenterhytta", 35), //
 	BJORNHOLDT("bjornholdt", 45), //
-	KIKUT("kikut", 75), //
-	GORJA("gorja", 65), //
-	KOBBERHAUG("kobberhaug", 80), //
-	TOMTE("tomte", 80), //
-	BRUNKOLLEN("brunkollen", 34), //
-	SMEDMYRKOIA("smedmyrkoia", 83), //
-	SAETEREN("saeteren", 66), //
+	TOMTE("tomte", 49), //
 	VENAS("venas", 59), //
-	MUSTADKROKEN("mustadkroken", 190), //
-	MYRSETER("myrseter", 138), //
-	OPPKUVEN("oppkuven", 151), //
+	GORJA("gorja", 65), //
+	SAETEREN("saeteren", 66), //
+	KIKUT("kikut", 75), //
+	SMEDMYRKOIA("smedmyrkoia", 83), //
+	KOBBERHAUG("kobberhaug", 100), //
 	PRESTHYTTA("presthytta", 131), //
-	GYRIHAUG("gyrihaug", 201), //
+	MYRSETER("myrseter", 138), //
+	SINNERDAMMEN("sinnerdammen", 139), //
+	OPPKUVEN("oppkuven", 151), //
+	KATNOSDAMMEN("katnosdammen", 161), //
 	JORGENHYTTA("jorgenhytta", 176), //
-	SINNERDAMMEN("sinnerdammen", 169), //
 	PERSHUSFJELLET("pershusfjellet", 182), //
-	KATNOSDAMMEN("katnosdammen", 131);
+	MUSTADKROKEN("mustadkroken", 190), //
+	GYRIHAUG("gyrihaug", 201);
 
 	private final String navn;
 	private final int poeng;
